@@ -192,6 +192,7 @@ endif
 
 hi Boolean         guifg=#dca3a3
 hi Character       guifg=#dca3a3 gui=bold
+hi ColorColumn     guifg=#93b3a3 guibg=#3f4040
 hi Comment         guifg=#7f9f7f gui=italic
 hi Conditional     guifg=#f0dfaf gui=bold
 hi Constant        guifg=#dca3a3 gui=bold
@@ -411,7 +412,7 @@ else
     hi Normal          guifg=#dcdccc guibg=#3f3f3f
     hi CursorLine      guibg=#434443
     if exists("g:zenburn_unified_CursorColumn") && g:zenburn_unified_CursorColumn
-        hi CursorColumn    guibg=#434343
+        hi CursorColumn    guibg=#434443
     else
         hi CursorColumn    guibg=#4f4f4f
     endif
@@ -489,6 +490,7 @@ endif
 
 " new tabline and fold column
 if exists("g:zenburn_high_Contrast") && g:zenburn_high_Contrast
+    hi ColorColumn   guibg=#161616
     hi FoldColumn    guibg=#161616
     hi Folded        guibg=#161616
     hi TabLine       guifg=#88b090 guibg=#313633 gui=none
@@ -498,6 +500,7 @@ if exists("g:zenburn_high_Contrast") && g:zenburn_high_Contrast
     hi SpecialKey    guibg=#242424
     
     if &t_Co > 255
+        hi ColorColumn   ctermbg=233 ctermfg=109
         hi FoldColumn    ctermbg=233 ctermfg=109
         hi Folded        ctermbg=233 ctermfg=109
         hi TabLine       ctermbg=236 ctermfg=108 cterm=none
@@ -505,6 +508,7 @@ if exists("g:zenburn_high_Contrast") && g:zenburn_high_Contrast
         hi TabLineFill   ctermbg=236 ctermfg=236
     endif
 else
+    hi ColorColumn   guibg=#333333
     hi FoldColumn    guibg=#333333
     hi Folded        guibg=#333333
     hi TabLine       guifg=#d0d0b8 guibg=#222222 gui=none
@@ -514,6 +518,7 @@ else
     hi SpecialKey    guibg=#444444
 
     if &t_Co > 255
+        hi ColorColumn   ctermbg=236 ctermfg=109
         hi FoldColumn    ctermbg=236 ctermfg=109
         hi Folded        ctermbg=236 ctermfg=109
         hi TabLine       ctermbg=235 ctermfg=187 cterm=none
@@ -536,25 +541,25 @@ if exists("_zenburn_ctags") && _zenburn_ctags
         " coloured as a global variable. They should not be global, since
         " they're not visible outside the method.
         " If this is some very bright colour group then things look bad.
-    	hi link CTagsGlobalVariable    Identifier
+        hi link CTagsGlobalVariable     Identifier
         
-        hi CTagsClass             guifg=#acd0b3
+        hi CTagsClass                   guifg=#acd0b3
         if &t_Co > 255
-            hi CTagsClass         ctermfg=115
+            hi CTagsClass               ctermfg=115
         endif
 
-        hi link CTagsImport       Statement
-        hi link CTagsMember       Function
+        hi link CTagsImport             Statement
+        hi link CTagsMember             Function
 
-    	hi link CTagsGlobalConstant    Constant
+        hi link CTagsGlobalConstant     Constant
   
         " These do not yet have support, I can't get them to appear
-        hi link EnumerationValue  Float
-        hi link EnumerationName   Identifier
-        hi link DefinedName       WarningMsg
-    	hi link LocalVariable     WarningMsg
-    	hi link Structure         WarningMsg
-    	hi link Union             WarningMsg
+        hi link EnumerationValue        Float
+        hi link EnumerationName         Identifier
+        hi link DefinedName             WarningMsg
+        hi link LocalVariable           WarningMsg
+        hi link Structure               WarningMsg
+        hi link Union                   WarningMsg
 endif
 
 " TODO check for more obscure syntax groups that they're ok
