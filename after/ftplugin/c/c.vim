@@ -8,3 +8,5 @@ set cc=+1
 " Indenting options
 set autoindent
 set nocindent
+" Trun on line numbering.
+set number

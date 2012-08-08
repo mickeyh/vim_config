@@ -3,7 +3,7 @@
 " 1. Locale
 " 2. Vim Behaviour
 " 3. Key Bindings
-" 4. Vim UI
+" 4. Vim Appearance
 " 5. Plugin Configuration
 
 """" 0. Pathogen
@@ -20,29 +20,9 @@ set hidden
 " Use filetype-based syntax hilighting, ftplugins, and indentation.
 syntax on
 filetype plugin indent on
-" Search settings
-set hlsearch " hilight
-set incsearch " jump to best fit
 " Make marks work on character positions by default.
 nnoremap ' `
 nnoremap ` '
-" Tab settings
-set autoindent
-set smartindent
-set tabstop=2
-set shiftwidth=2
-set expandtab
-" Remove menubar, toolbar, scroll bars (lrb), in that order.
-set guioptions-=m
-set guioptions-=T
-set guioptions-=l
-set guioptions-=r
-set guioptions-=b
-" Make statusline appear even with only single window.
-set laststatus=2
-" Add git branch to statusline.
-" cf the default statusline: %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P.
-set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
 " Set completion to bring up a popup with longest common text.
 set completeopt=longest,menuone
 
@@ -58,11 +38,28 @@ map <c-h> <c-w>h
 " Open NERDTree plugin.
 map <leader>n :NERDTreeToggle<CR>
 
-"""" 4. Vim UI
-set t_Co=256
-colors zenburn
+"""" 4. Vim Appearance
+" Search settings
+set hlsearch " hilight
+set incsearch " jump to best fit
+" Tab settings
+set autoindent
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+" Make statusline appear even with only single window.
+set laststatus=2
+" Add git branch to statusline.
+" cf the default statusline: %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P.
+set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
+" Highlight whitespace.
+set list
+set listchars=tab:>-,trail:#
 
 """" 5. Plugin Configuration
+" Zenburn.
 " Display unified cursorline and cursorcolumn.
 let g:zenburn_unified_CursorColumn=1
 set cursorline cursorcolumn
+colors zenburn

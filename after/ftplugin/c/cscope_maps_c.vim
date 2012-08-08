@@ -47,7 +47,7 @@ if has("cscope")
 
   " show msg when any other cscope db added
   " TODO: You should figure out why you need to suppress this.
-  set nocscopeverbose 
+  " set nocscopeverbose 
 
 
   """"""""""""" My cscope/vim key mappings
