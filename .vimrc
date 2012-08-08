@@ -55,7 +55,7 @@ set laststatus=2
 set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
 " Highlight whitespace.
 set list
-set listchars=tab:>-,trail:#
+set listchars=tab:>-,trail:~
 
 """" 5. Plugin Configuration
 " Zenburn.
