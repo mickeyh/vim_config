@@ -20,6 +20,8 @@ set hidden
 " Use filetype-based syntax hilighting, ftplugins, and indentation.
 syntax on
 filetype plugin indent on
+" Filetype-based omnicompletion.
+set omnifunc=syntaxcomplete#Complete
 " Make marks work on character positions by default.
 nnoremap ' `
 nnoremap ` '
@@ -28,11 +30,11 @@ set completeopt=longest,menuone
 
 """" 3. Key Bindings
 let mapleader=","
-" Window movement.
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
+" More convenient window movement.
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
 
 """" 4. Vim Appearance
 " Search settings
@@ -52,14 +54,13 @@ set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
 " Highlight whitespace.
 set list
 set listchars=tab:>-,trail:~
+" Don't hilight cursor line or column.
+set nocursorline nocursorcolumn
 
 """" 5. Plugin Configuration
 " Zenburn.
-" Display unified cursorline and cursorcolumn.
-let g:zenburn_unified_CursorColumn=1
-set cursorline cursorcolumn
 colors zenburn
 " Open NERDTree plugin.
 map <leader>n :NERDTreeToggle<CR>
-" Open taglist plugin.
-noremap <Leader>g :TlistToggle<cr>
+" Open tagbar plugin.
+map <leader>g :TagbarToggle<CR>
