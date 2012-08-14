@@ -45,8 +45,8 @@ set incsearch " jump to best fit
 " Tab settings
 set autoindent
 set smartindent
-set tabstop=2
-set shiftwidth=2
+set tabstop=3
+set shiftwidth=3
 set expandtab
 " Make statusline appear even with only single window.
 set laststatus=2
