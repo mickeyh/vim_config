@@ -33,10 +33,6 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
-" Open TaskList plugin (5. Plugin Configuration).
-" " map <leader>td <Plug>TaskList
-" Open NERDTree plugin.
-map <leader>n :NERDTreeToggle<CR>
 
 """" 4. Vim Appearance
 " Search settings
@@ -63,3 +59,7 @@ set listchars=tab:>-,trail:~
 let g:zenburn_unified_CursorColumn=1
 set cursorline cursorcolumn
 colors zenburn
+" Open NERDTree plugin.
+map <leader>n :NERDTreeToggle<CR>
+" Open taglist plugin.
+noremap <Leader>g :TlistToggle<cr>
