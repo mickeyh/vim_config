@@ -64,3 +64,5 @@ colors zenburn
 map <leader>n :NERDTreeToggle<CR>
 " Open tagbar plugin.
 map <leader>g :TagbarToggle<CR>
+" Open Gundo plugin.
+map <leader>u :GundoToggle<CR>
