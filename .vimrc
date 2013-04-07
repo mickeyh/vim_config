@@ -27,6 +27,8 @@ nnoremap ' `
 nnoremap ` '
 " Set completion to bring up a popup with longest common text.
 set completeopt=longest,menuone
+" Use relative numbering.
+set relativenumber
 
 """" 3. Key Bindings
 let mapleader=","
