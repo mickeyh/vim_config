@@ -56,11 +56,12 @@ set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
 " Highlight whitespace.
 set list
 set listchars=tab:>-,trail:~
-" Don't hilight cursor line or column.
-set nocursorline nocursorcolumn
+" Do hilight cursor line and column.
+set cursorline cursorcolumn
 
 """" 5. Plugin Configuration
 " Zenburn.
+"let g:zenburn_unified_CursorColumn=1
 colors zenburn
 " Open NERDTree plugin.
 map <leader>n :NERDTreeToggle<CR>
@@ -68,3 +69,7 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>g :TagbarToggle<CR>
 " Open Gundo plugin.
 map <leader>u :GundoToggle<CR>
+" Ultisnips expand <c-f>, list snippets <c-tab>, forward <c-g>, backward <c-b>
+let g:UltiSnipsExpandTrigger="<C-f>"
+let g:UltiSnipsJumpForwardTrigger="<C-g>"
+let g:UltiSnipsJumpBackwardTrigger="<C-b>"

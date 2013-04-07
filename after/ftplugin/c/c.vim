@@ -8,6 +8,5 @@ set cc=+1
 " Indenting options
 set autoindent
 set nocindent
-" Turn on line numbering.
-set number
+" Define how to comment.
 set comments=sl:/*,mb:\ *,elx:\ */,://
