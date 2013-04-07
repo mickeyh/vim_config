@@ -56,20 +56,27 @@ set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
 " Highlight whitespace.
 set list
 set listchars=tab:>-,trail:~
-" Do hilight cursor line and column.
-set cursorline cursorcolumn
+" Do hilight cursor line but not column.
+set cursorline nocursorcolumn
 
 """" 5. Plugin Configuration
-" Zenburn.
-"let g:zenburn_unified_CursorColumn=1
+""" Zenburn.
 colors zenburn
+""" NERDTree.
 " Open NERDTree plugin.
 map <leader>n :NERDTreeToggle<CR>
+""" Tagbar.
 " Open tagbar plugin.
 map <leader>g :TagbarToggle<CR>
+""" Gundo.
 " Open Gundo plugin.
 map <leader>u :GundoToggle<CR>
-" Ultisnips expand <c-f>, list snippets <c-tab>, forward <c-g>, backward <c-b>
+""" UltiSnips.
+" Expand <c-f>, list snippets <c-tab>, forward <c-g>, backward <c-b>.
 let g:UltiSnipsExpandTrigger="<C-f>"
 let g:UltiSnipsJumpForwardTrigger="<C-g>"
 let g:UltiSnipsJumpBackwardTrigger="<C-b>"
+" Snippet read directory is "my_UltiSnips".
+let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
+" :UltiSnipsEdit will open the snippet file in a horizontal split.
+let g:UltiSnipsEditSplit="horizontal"
