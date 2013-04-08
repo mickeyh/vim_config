@@ -20,15 +20,18 @@ set hidden
 " Use filetype-based syntax hilighting, ftplugins, and indentation.
 syntax on
 filetype plugin indent on
-" Filetype-based omnicompletion.
-set omnifunc=syntaxcomplete#Complete
 " Make marks work on character positions by default.
 nnoremap ' `
 nnoremap ` '
+" Filetype-based omnicompletion.
+set omnifunc=syntaxcomplete#Complete
 " Set completion to bring up a popup with longest common text.
 set completeopt=longest,menuone
-" Use relative numbering.
-set relativenumber
+" Use numbering. Don't use relative numbering as this is slow (especially in
+" .tex files).
+set number
+" Assume .tex files are latex files.
+let g:tex_flavor='latex'
 
 """" 3. Key Bindings
 let mapleader=","
@@ -56,8 +59,9 @@ set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
 " Highlight whitespace.
 set list
 set listchars=tab:>-,trail:~
-" Do hilight cursor line but not column.
-set cursorline nocursorcolumn
+" Don't hilight cursor line or column. These are slow (especially in .tex
+" files).
+set nocursorline nocursorcolumn
 
 """" 5. Plugin Configuration
 """ Zenburn.
