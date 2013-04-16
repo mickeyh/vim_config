@@ -1,0 +1,27 @@
+snippet for "For loop" b
+for ${1:i} = ${2:1:n}
+	$3
+end$0
+endsnippet
+
+snippet fun "function" b
+function [$1] = ${2:function}(${3:variables})
+	$4
+end$0
+endsnippet
+
+snippet if "If statement" b
+if ${1:condition}
+	${2:${VISUAL/^\s*//}}
+end$0
+endsnippet
+
+snippet todo "TODO" i
+% TODO(`echo $USER`): ${1:desc} (`date +%F`)
+endsnippet
+
+snippet whi "While loop" b
+while ${1:condition}
+	$2
+end$0
+endsnippet

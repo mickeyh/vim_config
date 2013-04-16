@@ -1,17 +1,17 @@
 snippet snip "Snippet definition" !
 `echo snippet` ${1:trigger} "${2:description}" ${3:!b}
-$0
-`echo endsnippet`
+$4
+`echo endsnippet`$0
 endsnippet
 
 snippet global "Global snippet definition" !
 `echo global` !p
-$0
-`echo endglobal`
+$1
+`echo endglobal`$0
 endsnippet
 
 snippet vis "${VISUAL}" i
-\$\{VISUAL:${1:${2:default}${3:/transform/}}\}
+\${VISUAL${1:${2::default}${3:/transform/}}}$0
 endsnippet
 
 # vim:ft=snippets:
