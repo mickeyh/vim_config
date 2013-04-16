@@ -1,6 +1,6 @@
 " Override retarded formatoptions. Auto-wrap text, comments, allow
-" autoformatting with 'gq'. Insert comment leader on return.
-set fo=tcqro
+" autoformatting with 'gq'. Insert comment leader on return. Recognize lists.
+set fo=tcqron
 " Wrap lines longer than 80 characters
 set wrap linebreak textwidth=80
 " Hilight 81st column.
