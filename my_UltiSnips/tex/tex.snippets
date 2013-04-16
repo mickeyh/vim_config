@@ -1,0 +1,203 @@
+global !p
+import difflib
+def complete(root, possible_matches):
+	if root:
+		possible_matches = difflib.get_close_matches(root, possible_matches, 4, 0.01)
+	# Determine return value.
+	if len(possible_matches) == 0:
+		return ''
+	elif len(possible_matches) == 1:
+		return possible_matches[0]
+	else:
+		return '('+'|'.join(possible_matches)+')'
+endglobal
+
+snippet ali "Align" b
+\begin{align${1:*}}
+	$2
+\end{align$1}$0
+endsnippet
+
+snippet alg "Algorithm" b
+\begin{algorithm}[H]\caption{$1}\label{$2}
+\begin{algorithmic}[1]
+	$3
+\end{algorithmic}
+\end{algorithm}$0
+endsnippet
+
+snippet arr "\begin{array}..." i
+\begin{array}{$1}
+	$2
+\end{array}$0
+endsnippet
+
+snippet beg "Begin" b
+\begin{$1}
+	$2
+\end{$1}$0
+endsnippet
+
+snippet claim "Claim" b
+\begin{claim}
+	$1
+\end{claim}$0
+endsnippet
+
+snippet com "Algorithmic environment Comment" i
+\Comment{$1}$0
+endsnippet
+
+snippet def "Def" b
+\def\\$1{$2}$0
+endsnippet
+
+snippet draw "TikZ \draw[...]" i
+\draw[$1] $0
+endsnippet
+
+snippet el "Algorithmic environment Else" b
+\Else
+	$0
+endsnippet
+
+snippet em "emph" w
+\emph{${1:${VISUAL}}}$0
+endsnippet
+
+snippet enum "Enumerate" b
+\begin{enumerate}[$1]
+	$2
+\end{enumerate}$0
+endsnippet
+
+snippet pic "Centered picture" b
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=${1:\textwidth}]{${2:path/to/pic}}
+	\caption{${3:Caption text}}
+\end{figure}$0
+endsnippet
+
+snippet for "Algorthmicx For" b
+\For {\$${1:i}\\gets ${2:1,\ldots,n}\$}
+	$3
+\EndFor$0
+endsnippet
+
+snippet graph "TikZ graph" b
+\begin{tikzpicture}
+	\tikzstyle{every node} = [circle,fill=gray!30]
+	\node (${1:label}) at (${2:location}) {${3:text}};
+	$4
+\end{tikzpicture}$0
+endsnippet
+
+snippet if "Algorithmicx If" b
+\If {$1}
+	$2
+\EndIf$0
+endsnippet
+
+snippet inc "Include" b
+\include{${1:path/to/include}}$0
+endsnippet
+
+snippet input "Input" b
+\input{${1:path/to/input}}$0
+endsnippet
+
+snippet it "Item (i)" i
+
+\item ${VISUAL/^\s*//}$0
+endsnippet
+
+snippet it "Item (!b)" !b
+\item ${VISUAL/^\s*//}$0
+endsnippet
+
+snippet itc "Item (i)" i
+
+% $1
+\item ${VISUAL/^\s*//}$0
+endsnippet
+
+snippet itc "Item with precomment (!b)" !b
+% $1
+\item ${VISUAL/^\s*//}$0
+endsnippet
+
+
+snippet itemize "Itemize inside a line" i
+
+\begin{itemize}`!p snip >> 1
+if snip.v.text:
+	for line in snip.v.text.splitlines():
+		snip += r'\item '+line.strip()
+else:
+	snip += r'\item '
+`$1
+\end{itemize}$0
+
+endsnippet
+
+snippet itemize "Itemize (!b)" !b
+\begin{itemize}`!p snip >> 1
+if snip.v.text:
+	for line in snip.v.text.splitlines():
+		snip += r'\item '+line.strip()
+else:
+	snip += r'\item '
+`$1
+\end{itemize}$0
+endsnippet
+
+snippet lst "Code listing. Ugly. TODO: WHY MUST THIS OVERRIDE?" !b
+\lstinputlisting[style=`!p snip.rv=complete(t[1], ['Matlab','Python'])`]{${2:path/to/file}}${0: Enter style match string: $1}
+endsnippet
+
+snippet node "TikZ \node" i
+\node (${1:label}) at (${2:location}) {${3:text}};$0
+endsnippet
+
+snippet note "Note" b
+\parbox{\textwidth}{\textbf{Note}: $1}$0
+endsnippet
+
+snippet proof "Proof" b
+\begin{proof}
+	$1
+\end{proof}$0
+endsnippet
+
+snippet st "Algorithmicx \State"
+\State 
+endsnippet
+
+snippet stx "Algorithmicx \Statex"
+\Statex 
+endsnippet
+
+snippet txt "\text{...}" i
+\text{$1}$0
+endsnippet
+
+snippet tikzpic "TikZ Picture" b
+\begin{tikzpicture}
+	$1
+\end{tikzpicture}$0
+endsnippet
+
+snippet todo "Visible TODO in regular mode"
+\begin{huge}\textbf{TODO:} $1\end{huge}$0
+endsnippet
+
+snippet todom "Visible TODO in math mode"
+\begin{huge}\mathbf{TODO:} $1\end{huge}$0
+endsnippet
+
+snippet whi "While" b
+\While {$1}
+	$2
+\EndWhile$0
+endsnippet
