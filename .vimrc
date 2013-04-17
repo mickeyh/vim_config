@@ -1,20 +1,21 @@
-"""" Organizational Structure
-" 0. Pathogen
-" 1. Locale
-" 2. Vim Behaviour
-" 3. Key Bindings
-" 4. Vim Appearance
-" 5. Plugin Configuration
+"""" Organizational Structure.
+" 0. Pathogen.
+" 1. Locale.
+" 2. Vim Behaviour.
+" 3. Key Bindings.
+" 4. Vim Appearance.
+" 5. Plugin Configuration.
+" 6. GVim Configuration.
 
-"""" 0. Pathogen
+"""" 0. Pathogen.
 " Set up pathogen
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-"""" 1. Locale
+"""" 1. Locale.
 
-"""" 2. Vim Behaviour
+"""" 2. Vim Behaviour.
 " Allow switching away from unsaved buffers.
 set hidden
 " Use filetype-based syntax hilighting, ftplugins, and indentation.
@@ -33,7 +34,7 @@ set number
 " Assume .tex files are latex files.
 let g:tex_flavor='latex'
 
-"""" 3. Key Bindings
+"""" 3. Key Bindings.
 let mapleader=","
 " More convenient window movement.
 noremap <C-J> <C-W>j
@@ -41,7 +42,7 @@ noremap <C-K> <C-W>k
 noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 
-"""" 4. Vim Appearance
+"""" 4. Vim Appearance.
 " Search settings
 set hlsearch " hilight
 set incsearch " jump to best fit
@@ -63,18 +64,21 @@ set listchars=tab:>-,trail:~
 " files).
 set nocursorline nocursorcolumn
 
-"""" 5. Plugin Configuration
-""" Zenburn.
-colors zenburn
+"""" 5. Plugin Configuration.
+""" Colorscheme.
+colo desert
+""" clang_complete.
+" Use clang library instead of clang for faster completion.
+let g:clang_use_library=1
+""" Gundo.
+" Open Gundo plugin.
+map <leader>u :GundoToggle<CR>
 """ NERDTree.
 " Open NERDTree plugin.
 map <leader>n :NERDTreeToggle<CR>
 """ Tagbar.
 " Open tagbar plugin.
 map <leader>g :TagbarToggle<CR>
-""" Gundo.
-" Open Gundo plugin.
-map <leader>u :GundoToggle<CR>
 """ UltiSnips.
 " Expand <c-f>, list snippets <c-tab>, forward <c-g>, backward <c-b>.
 let g:UltiSnipsExpandTrigger="<C-f>"
@@ -84,3 +88,21 @@ let g:UltiSnipsJumpBackwardTrigger="<C-b>"
 let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
 " :UltiSnipsEdit will open the snippet file in a horizontal split.
 let g:UltiSnipsEditSplit="horizontal"
+
+"""" 6. GVim Configuration.
+""" Open guard.
+if has('gui')
+   if has('gui_running')
+""" End open guard.
+" Remove menubar, toolbar, scroll bars (lrb), in that order.
+set guioptions-=m
+set guioptions-=T
+set guioptions-=l
+set guioptions-=r
+set guioptions-=b
+" Colorscheme.
+colo zenburn
+""" Close guard.
+   endif
+endif
+""" End close guard.
