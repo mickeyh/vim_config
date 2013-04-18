@@ -26,16 +26,26 @@ snippet alg "Algorithm" b
 \end{algorithm}$0
 endsnippet
 
-snippet arr "\begin{array}..." i
+snippet array "\begin{array}..." i
 \begin{array}{$1}
 	$2
 \end{array}$0
+endsnippet
+
+snippet arrow "TikZ \draw[->]..." b
+\draw[->] (${1:source}) edge[$2] node{${3:label}} (${4:dest});$0
 endsnippet
 
 snippet beg "Begin" b
 \begin{$1}
 	$2
 \end{$1}$0
+endsnippet
+
+snippet cen "\begin{center}..." b
+\begin{center}
+	$1
+\end{center}$0
 endsnippet
 
 snippet claim "Claim" b
@@ -157,7 +167,7 @@ snippet lst "Code listing. Ugly. TODO: WHY MUST THIS OVERRIDE?" !b
 endsnippet
 
 snippet node "TikZ \node" i
-\node (${1:label}) at (${2:location}) {${3:text}};$0
+\node[$1] (${2:label}) at (${3:location}) {${4:text}};$0
 endsnippet
 
 snippet note "Note" b
@@ -182,9 +192,9 @@ snippet txt "\text{...}" i
 \text{$1}$0
 endsnippet
 
-snippet tikzpic "TikZ Picture" b
-\begin{tikzpicture}
-	$1
+snippet tikzp "TikZ Picture" b
+\begin{tikzpicture}[$1]
+	$2
 \end{tikzpicture}$0
 endsnippet
 
