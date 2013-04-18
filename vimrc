@@ -8,7 +8,7 @@
 " 6. GVim Configuration.
 
 """" 0. Pathogen.
-" Set up pathogen
+" Set up pathogen.
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -66,16 +66,10 @@ set nocursorline nocursorcolumn
 
 """" 5. Plugin Configuration.
 """ Colorscheme.
-colo desert
-""" clang_complete.
-" Use clang library instead of clang for faster completion.
-let g:clang_use_library=1
+colorscheme desert
 """ Gundo.
 " Open Gundo plugin.
 map <leader>u :GundoToggle<CR>
-""" NERDTree.
-" Open NERDTree plugin.
-map <leader>n :NERDTreeToggle<CR>
 """ Tagbar.
 " Open tagbar plugin.
 map <leader>g :TagbarToggle<CR>
@@ -88,21 +82,3 @@ let g:UltiSnipsJumpBackwardTrigger="<C-b>"
 let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
 " :UltiSnipsEdit will open the snippet file in a horizontal split.
 let g:UltiSnipsEditSplit="horizontal"
-
-"""" 6. GVim Configuration.
-""" Open guard.
-if has('gui')
-   if has('gui_running')
-""" End open guard.
-" Remove menubar, toolbar, scroll bars (lrb), in that order.
-set guioptions-=m
-set guioptions-=T
-set guioptions-=l
-set guioptions-=r
-set guioptions-=b
-" Colorscheme.
-colo zenburn
-""" Close guard.
-   endif
-endif
-""" End close guard.
