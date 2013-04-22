@@ -85,7 +85,7 @@ let g:UltiSnipsEditSplit="horizontal"
 """ YouCompleteMe.
 " Don't let YouCompleteMe reduce Vim's updatetime to 1 second.
 let g:ycm_allow_changing_updatetime=0
-" Only enable ycm in C, C++, and Python files.
+" Only enable ycm in these filetypes.
 let g:ycm_filetype_whitelist={'c':1,'cpp':1,'matlab':1,'python':1}
 " Use basic <c-n>, <c-p> to select completion strings.
 let g:ycm_key_list_select_completion=[]
