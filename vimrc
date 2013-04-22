@@ -59,7 +59,7 @@ set laststatus=2
 set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
 " Highlight whitespace.
 set list
-set listchars=tab:>-,trail:~
+set listchars=tab:▷⋅,trail:⋅
 " Don't hilight cursor line or column. These are slow (especially in .tex
 " files).
 set nocursorline nocursorcolumn
@@ -82,3 +82,13 @@ let g:UltiSnipsJumpBackwardTrigger="<C-b>"
 let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
 " :UltiSnipsEdit will open the snippet file in a horizontal split.
 let g:UltiSnipsEditSplit="horizontal"
+""" YouCompleteMe.
+" Don't let YouCompleteMe reduce Vim's updatetime to 1 second.
+let g:ycm_allow_changing_updatetime=0
+" Only enable ycm in C, C++, and Python files.
+let g:ycm_filetype_whitelist={'c':1,'cpp':1,'matlab':1,'python':1}
+" Use basic <c-n>, <c-p> to select completion strings.
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+" Specify a default YCM configuration file if none is found for the current project.
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/default_ycm_extra_conf.py'
