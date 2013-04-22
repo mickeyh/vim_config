@@ -2,10 +2,22 @@ snippet lst "Code listing. Ugly." b
 \lstinputlisting[style=`!p snip.rv=complete(t[1], ['Matlab','Python'])`]{${2:path/to/file}}${0: Enter style match string: $1}
 endsnippet
 
+snippet nl1 "l1 norm \norm{...}_1" i
+\norm{$1}_1$0
+endsnippet
+
+snippet nl2 "l2 norm \norm{...}_2" i
+\norm{$1}_2$0
+endsnippet
+
 snippet () "\Paren{...}" i
 \Paren{$1}$0
 endsnippet
 
 snippet {} "\Set{...}" i
 \Set{$1}$0
+endsnippet
+
+snippet || "\abs{...}" i
+\abs{$1}$0
 endsnippet
