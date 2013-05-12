@@ -1,2 +1,0 @@
-@414 - unified_cursorcolumn didn't unify (value xx434xx should be xx444xx).
-@Every FoldColumn - Added support for ColorColumn. Made it same as FoldColumn.

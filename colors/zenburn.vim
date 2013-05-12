@@ -563,4 +563,3 @@ if exists("_zenburn_ctags") && _zenburn_ctags
 endif
 
 " TODO check for more obscure syntax groups that they're ok
-
