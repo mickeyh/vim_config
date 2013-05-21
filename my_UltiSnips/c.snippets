@@ -15,16 +15,22 @@ snippet todo "TODO" b
 // TODO(`echo $USER`): ${1:desc} (`date +%F`)
 endsnippet
 
-snippet st "Struct" !b
+snippet st "Struct" b
 struct ${1:name} {
    $2
 };$0
 endsnippet
 
-snippet tst "Typedef struct" !b
+snippet tst "Typedef struct" b
 typedef struct ${1:name} {
    $2
 } $1_t;$0
+endsnippet
+
+snippet whi "while loop" b
+while ($1) {
+	${VISUAL}$2
+}$0
 endsnippet
 
 # vim:ft=snippets:
