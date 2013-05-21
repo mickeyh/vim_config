@@ -1,56 +1,49 @@
 global !p
-import difflib
-def complete(root, possible_matches):
-	if root:
-		possible_matches = difflib.get_close_matches(root, possible_matches, 4, 0.01)
-	# Determine return value.
-	if len(possible_matches) == 0:
-		return ''
-	elif len(possible_matches) == 1:
-		return possible_matches[0]
-	else:
-		return '('+'|'.join(possible_matches)+')'
+def formatVisual(snip):
+	snip >> 1
+	if not snip.v.text: return snip.mkline('')
+	return '\n'.join([snip.mkline(l) for l in snip.v.text.strip().splitlines()])
 endglobal
 
 snippet ali "Align" b
 \begin{align${1:*}}
-	$2
+`!p snip.rv=formatVisual(snip)`$2
 \end{align$1}$0
 endsnippet
 
 snippet alg "Algorithm" b
 \begin{algorithm}[H]\caption{$1}\label{$2}
 \begin{algorithmic}[1]
-	$3
+`!p snip.rv=formatVisual(snip)`$3
 \end{algorithmic}
 \end{algorithm}$0
 endsnippet
 
 snippet array "\begin{array}..." i
 \begin{array}{$1}
-	$2
+`!p snip.rv=formatVisual(snip)`$2
 \end{array}$0
 endsnippet
 
 snippet arrow "TikZ \draw[->]..." b
-\draw[->] (${1:source}) edge[$2] node{${3:label}} (${4:dest});$0
+\draw[->] (${1:source}) edge[$2] node{$3} (${4:dest});$0
 endsnippet
 
 snippet beg "Begin" b
 \begin{$1}
-	$2
+`!p snip.rv=formatVisual(snip)`$2
 \end{$1}$0
 endsnippet
 
 snippet cen "\begin{center}..." b
 \begin{center}
-	$1
+`!p snip.rv=formatVisual(snip)`$1
 \end{center}$0
 endsnippet
 
 snippet claim "Claim" b
 \begin{claim}
-	$1
+`!p snip.rv=formatVisual(snip)`$1
 \end{claim}$0
 endsnippet
 
@@ -79,6 +72,10 @@ snippet enum "Enumerate" b
 \begin{enumerate}[$1]
 	$2
 \end{enumerate}$0
+endsnippet
+
+snippet frac "Fraction" i
+\frac{$1}{$2}$0
 endsnippet
 
 snippet pic "Centered picture" b
@@ -162,10 +159,6 @@ else:
 \end{itemize}$0
 endsnippet
 
-snippet lst "Code listing. Ugly. TODO: WHY MUST THIS OVERRIDE?" !b
-\lstinputlisting[style=`!p snip.rv=complete(t[1], ['Matlab','Python'])`]{${2:path/to/file}}${0: Enter style match string: $1}
-endsnippet
-
 snippet node "TikZ \node" i
 \node[$1] (${2:label}) at (${3:location}) {${4:text}};$0
 endsnippet
@@ -176,7 +169,7 @@ endsnippet
 
 snippet proof "Proof" b
 \begin{proof}
-	$1
+`!p snip.rv=formatVisual(snip)`$1
 \end{proof}$0
 endsnippet
 
@@ -188,13 +181,18 @@ snippet stx "Algorithmicx \Statex"
 \Statex 
 endsnippet
 
+snippet tab "Tabular environment" b
+\begin{tabular}{$1}
+`!p snip.rv=formatVisual(snip)`$2
+\end{tabular}$0
+endsnippet
 snippet txt "\text{...}" i
 \text{$1}$0
 endsnippet
 
 snippet tikzp "TikZ Picture" b
 \begin{tikzpicture}[$1]
-	$2
+`!p snip.rv=formatVisual(snip)`$2
 \end{tikzpicture}$0
 endsnippet
 
@@ -210,4 +208,8 @@ snippet whi "While" b
 \While {$1}
 	$2
 \EndWhile$0
+endsnippet
+
+snippet $$ "Inline math" i
+\$$1\$$0
 endsnippet

@@ -1,23 +1,41 @@
-snippet lst "Code listing. Ugly." b
-\lstinputlisting[style=`!p snip.rv=complete(t[1], ['Matlab','Python'])`]{${2:path/to/file}}${0: Enter style match string: $1}
+global !p
+import difflib
+def complete(root, possible_matches):
+	if root:
+		possible_matches = [m for m in possible_matches if m.startswith(root)]
+	# Determine return value.
+	if len(possible_matches) == 0:
+		return ''
+	elif len(possible_matches) == 1:
+		return possible_matches[0][len(root):]
+	else:
+		return '('+'|'.join(possible_matches)+')'
+endglobal
+
+snippet lst "Code listing." !b
+\lstinputlisting[style=$1`!p snip.rv=complete(t[1], ['Matlab','Python'])`]{${2:path/to/file}}$0
 endsnippet
 
 snippet nl1 "l1 norm \norm{...}_1" i
-\norm{$1}_1$0
+\norm{${VISUAL}$1}_1$0
 endsnippet
 
 snippet nl2 "l2 norm \norm{...}_2" i
-\norm{$1}_2$0
+\norm{${VISUAL}$1}_2$0
 endsnippet
 
 snippet () "\Paren{...}" i
-\Paren{$1}$0
+\Paren{${VISUAL}$1}$0
 endsnippet
 
 snippet {} "\Set{...}" i
-\Set{$1}$0
+\Set{${VISUAL}$1}$0
+endsnippet
+
+snippet [] "Outline math" i
+\Brack{${VISUAL}$1}$0
 endsnippet
 
 snippet || "\abs{...}" i
-\abs{$1}$0
+\abs{${VISUAL}$1}$0
 endsnippet
