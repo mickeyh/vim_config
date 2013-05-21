@@ -21,9 +21,9 @@ set hidden
 " Use filetype-based syntax hilighting, ftplugins, and indentation.
 syntax on
 filetype plugin indent on
-" Make marks work on character positions by default.
-nnoremap ' `
-nnoremap ` '
+" Make marks work on character positions by default, and put mark at top of screen.
+nnoremap <expr> ' printf("`%czz", getchar())
+nnoremap <expr> ` printf("'%czz", getchar())
 " Filetype-based omnicompletion.
 set omnifunc=syntaxcomplete#Complete
 " Set completion to bring up a popup with longest common text.
@@ -41,6 +41,9 @@ noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
 noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
+" More convenient movement when lines are wrapped.
+nmap j gj
+nmap k gk
 
 """" 4. Vim Appearance.
 " Search settings
@@ -73,6 +76,8 @@ map <leader>u :GundoToggle<CR>
 """ Tagbar.
 " Open tagbar plugin.
 map <leader>g :TagbarToggle<CR>
+let g:tagbar_autoclose=1            " Tagbar window closes on tag jump.
+let g:tagbar_autofocus=1            " Cursor moves to Tagbar window when it opens.
 """ UltiSnips.
 " Expand <c-f>, list snippets <c-tab>, forward <c-g>, backward <c-b>.
 let g:UltiSnipsExpandTrigger="<C-f>"
@@ -87,6 +92,7 @@ let g:UltiSnipsEditSplit="horizontal"
 let g:ycm_allow_changing_updatetime=0
 " Only enable ycm in these filetypes.
 let g:ycm_filetype_whitelist={'c':1,'cpp':1,'matlab':1,'python':1}
+let g:ycm_filetype_blacklist={'help':1}
 " Use basic <c-n>, <c-p> to select completion strings.
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
