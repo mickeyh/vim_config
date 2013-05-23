@@ -62,7 +62,7 @@ set laststatus=2
 set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
 " Highlight whitespace.
 set list
-set listchars=tab:â–·â‹…,trail:â‹…
+set listchars=tab:>·,trail:·
 " Don't hilight cursor line or column. These are slow (especially in .tex
 " files).
 set nocursorline nocursorcolumn
