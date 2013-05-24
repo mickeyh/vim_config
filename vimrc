@@ -69,7 +69,7 @@ set nocursorline nocursorcolumn
 
 """" 5. Plugin Configuration.
 """ Colorscheme.
-colorscheme desert
+colorscheme zenburn
 """ Gundo.
 " Open Gundo plugin.
 map <leader>u :GundoToggle<CR>
