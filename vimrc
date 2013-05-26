@@ -97,4 +97,4 @@ let g:ycm_filetype_blacklist={'help':1}
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 " Specify a default YCM configuration file if none is found for the current project.
-let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/default_ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/.vim/ycm_confs/default_ycm_extra_conf.py'
