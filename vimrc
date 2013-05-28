@@ -73,6 +73,8 @@ colorscheme zenburn
 """ Gundo.
 " Open Gundo plugin.
 map <leader>u :GundoToggle<CR>
+""" Tabular.
+map <leader>a :Tabularize 
 """ Tagbar.
 " Open tagbar plugin.
 map <leader>g :TagbarToggle<CR>
