@@ -35,7 +35,7 @@ set number
 let g:tex_flavor='latex'
 
 """" 3. Key Bindings.
-let mapleader=","
+let mapleader='\'
 " More convenient window movement.
 noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
@@ -82,16 +82,14 @@ let g:tagbar_autoclose=1            " Tagbar window closes on tag jump.
 let g:tagbar_autofocus=1            " Cursor moves to Tagbar window when it opens.
 """ UltiSnips.
 " Expand <c-f>, list snippets <c-tab>, forward <c-g>, backward <c-b>.
-let g:UltiSnipsExpandTrigger="<C-f>"
-let g:UltiSnipsJumpForwardTrigger="<C-g>"
-let g:UltiSnipsJumpBackwardTrigger="<C-b>"
+let g:UltiSnipsExpandTrigger="<c-f>"
+let g:UltiSnipsJumpForwardTrigger="<c-g>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 " Snippet read directory is "my_UltiSnips".
 let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
 " :UltiSnipsEdit will open the snippet file in a horizontal split.
 let g:UltiSnipsEditSplit="horizontal"
 """ YouCompleteMe.
-" Don't let YouCompleteMe reduce Vim's updatetime to 1 second.
-let g:ycm_allow_changing_updatetime=0
 " Only enable ycm in these filetypes.
 let g:ycm_filetype_whitelist={'c':1,'cpp':1,'matlab':1,'python':1}
 let g:ycm_filetype_blacklist={'help':1}
