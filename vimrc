@@ -70,6 +70,9 @@ set nocursorline nocursorcolumn
 """" 5. Plugin Configuration.
 """ Colorscheme.
 colorscheme zenburn
+""" Eclim.
+" Make Eclim play nicely with YouCompleteMe.
+let g:EclimCompletionMethod='omnifunc'
 """ Gundo.
 " Open Gundo plugin.
 map <leader>u :GundoToggle<CR>
@@ -91,7 +94,7 @@ let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
 let g:UltiSnipsEditSplit="horizontal"
 """ YouCompleteMe.
 " Only enable ycm in these filetypes.
-let g:ycm_filetype_whitelist={'c':1,'cpp':1,'matlab':1,'python':1}
+let g:ycm_filetype_whitelist={'c':1,'cpp':1,'java':1,'matlab':1,'python':1}
 let g:ycm_filetype_blacklist={'help':1}
 " Use basic <c-n>, <c-p> to select completion strings.
 let g:ycm_key_list_select_completion=[]
