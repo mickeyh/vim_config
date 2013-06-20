@@ -76,6 +76,8 @@ let g:EclimCompletionMethod='omnifunc'
 """ Gundo.
 " Open Gundo plugin.
 map <leader>u :GundoToggle<CR>
+""" Indent Guides plugin.
+let g:indent_guides_guide_size=1
 """ Tabular.
 map <leader>a :Tabularize 
 """ Tagbar.
