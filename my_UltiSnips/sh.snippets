@@ -1,3 +1,46 @@
+snippet cfile "" b
+#===============================================================================
+#
+#         FILE: ${1:filename}.sh
+#
+#        USAGE: $1.sh ${2:args}
+#
+#  DESCRIPTION: $3
+#      OPTIONS: ${4:-}
+# REQUIREMENTS: ${5:-}
+#         BUGS: -
+#        NOTES: -
+#      VERSION: 0.0.0
+#      CREATED: `date +%F`
+#      REVISED: `date +%F`
+#===============================================================================
+$0
+endsnippet
+
+snippet cse "Section comment" b
+#-------------------------------------------------------------------------------
+#  $1
+#-------------------------------------------------------------------------------$0
+endsnippet
+
+snippet fun "Function comment" b
+#===  FUNCTION  ================================================================
+#        NAME: $1
+# DESCRIPTION: $2${3:
+#      PARAMS
+#           1: $4}
+#===============================================================================
+function $1 () {
+	$5
+}
+$0
+endsnippet
+
 snippet todo "TODO"
 # TODO(`echo $USER`): ${1:desc} (`date +%F`)
+endsnippet
+
+snippet ube "Exec line" b
+#!/usr/bin/env bash
+$0
 endsnippet
