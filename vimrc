@@ -1,21 +1,12 @@
-"""" Organizational Structure.
-" 0. Pathogen.
-" 1. Locale.
-" 2. Vim Behaviour.
-" 3. Key Bindings.
-" 4. Vim Appearance.
-" 5. Plugin Configuration.
-" 6. GVim Configuration.
-
-"""" 0. Pathogen.
+"""" 0. Pathogen. {{{1
 " Set up pathogen.
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-"""" 1. Locale.
+"""" 1. Locale. {{{1
 
-"""" 2. Vim Behaviour.
+"""" 2. Vim Behaviour. {{{1
 " Allow switching away from unsaved buffers.
 set hidden
 " Use filetype-based syntax hilighting, ftplugins, and indentation.
@@ -36,7 +27,7 @@ set number
 " Assume .tex files are latex files.
 let g:tex_flavor='latex'
 
-"""" 3. Key Bindings.
+"""" 3. Key Bindings. {{{1
 let mapleader='\'
 " More convenient window movement.
 noremap <C-J> <C-W>j
@@ -47,7 +38,7 @@ noremap <C-L> <C-W>l
 nmap j gj
 nmap k gk
 
-"""" 4. Vim Appearance.
+"""" 4. Vim Appearance. {{{1
 " Search settings
 set hlsearch " hilight
 set incsearch " jump to best fit
@@ -69,7 +60,7 @@ set listchars=tab:>·,trail:·
 " files).
 set nocursorline nocursorcolumn
 
-"""" 5. Plugin Configuration.
+"""" 5. Plugin Configuration. {{{1
 """ Colorscheme.
 colorscheme zenburn
 """ Eclim.
@@ -102,3 +93,5 @@ let g:ycm_filetype_whitelist={'c':1,'cpp':1,'java':1,'matlab':1,'python':1}
 let g:ycm_filetype_blacklist={'help':1}
 " Specify a default YCM configuration file if none is found for the current project.
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_confs/default_ycm_extra_conf.py'
+
+" vim: set ft=vim foldmethod=marker ts=3 sw=3 tw=80 et :
