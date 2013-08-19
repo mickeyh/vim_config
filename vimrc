@@ -11,6 +11,8 @@ call pathogen#helptags()
 set hidden
 " Reload files automatically if they have changed.
 set autoread
+" Set swapfile directory to ~/.backup if possible.
+set directory=~/.backup,.
 " Use filetype-based syntax hilighting, ftplugins, and indentation.
 syntax on
 filetype plugin indent on
