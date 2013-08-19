@@ -9,6 +9,8 @@ call pathogen#helptags()
 """" 2. Vim Behaviour. {{{1
 " Allow switching away from unsaved buffers.
 set hidden
+" Reload files automatically if they have changed.
+set autoread
 " Use filetype-based syntax hilighting, ftplugins, and indentation.
 syntax on
 filetype plugin indent on
