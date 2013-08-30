@@ -43,6 +43,8 @@ nmap j gj
 nmap k gk
 
 """" 4. Vim Appearance. {{{1
+" Colorscheme.
+colorscheme zenburn
 " Search settings
 set hlsearch " hilight
 set incsearch " jump to best fit
@@ -65,8 +67,9 @@ set listchars=tab:>·,trail:·
 set nocursorline nocursorcolumn
 
 """" 5. Plugin Configuration. {{{1
-""" Colorscheme.
-colorscheme zenburn
+""" Ack.
+" Use ag instead of ack.
+let g:ackprg = 'ag --nogroup --nocolor --column'
 """ Eclim.
 " Make Eclim play nicely with YouCompleteMe.
 let g:EclimCompletionMethod='omnifunc'
@@ -76,7 +79,7 @@ map <leader>u :GundoToggle<CR>
 """ Indent Guides plugin.
 let g:indent_guides_guide_size=1
 """ Tabular.
-map <leader>a :Tabularize 
+map <leader>a :Tabularize
 """ Tagbar.
 " Open tagbar plugin.
 map <leader>g :TagbarToggle<CR>
