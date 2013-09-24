@@ -78,14 +78,6 @@ snippet fr "Fraction" i
 \frac{$1}{$2}$0
 endsnippet
 
-snippet pic "Centered picture" b
-\begin{figure}[htb]
-	\centering
-	\includegraphics[width=${1:\textwidth}]{${2:path/to/pic}}
-	\caption{${3:Caption text}}
-\end{figure}$0
-endsnippet
-
 snippet for "Algorthmicx For" b
 \For {\$${1:i}\\gets ${2:1,\ldots,n}\$}
 	$3
@@ -135,7 +127,7 @@ snippet itc "Item with precomment (!b)" !b
 endsnippet
 
 
-snippet itemize "Itemize inside a line" i
+snippet item "Itemize inside a line" i
 
 \begin{itemize}`!p snip >> 1
 if snip.v.text:
@@ -148,7 +140,7 @@ else:
 
 endsnippet
 
-snippet itemize "Itemize (!b)" !b
+snippet item "Itemize (!b)" !b
 \begin{itemize}`!p snip >> 1
 if snip.v.text:
 	for line in snip.v.text.splitlines():
@@ -165,6 +157,14 @@ endsnippet
 
 snippet note "Note" b
 \parbox{\textwidth}{\textbf{Note}: $1}$0
+endsnippet
+
+snippet pic "Centered picture" b
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=${1:\textwidth}]{${2:path/to/pic}}
+	\caption{${3:Caption text}}
+\end{figure}$0
 endsnippet
 
 snippet proof "Proof" b
