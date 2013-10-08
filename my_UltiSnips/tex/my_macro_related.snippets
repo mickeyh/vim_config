@@ -12,6 +12,14 @@ def complete(root, possible_matches):
 		return '('+'|'.join(possible_matches)+')'
 endglobal
 
+snippet Cov "Covariance" i
+\operatorname{Cov}\left[$1\right]$0
+endsnippet
+
+snippet E "Expectation" i
+\operatorname{E}\left[$1\right]$0
+endsnippet
+
 snippet lst "Code listing." !b
 \lstinputlisting[style=$1`!p snip.rv=complete(t[1], ['Matlab','Python'])`]{${2:path/to/file}}$0
 endsnippet
@@ -24,10 +32,18 @@ snippet nl2 "l2 norm \norm{...}_2" i
 \norm{${VISUAL}$1}_2$0
 endsnippet
 
+snippet Pr "Probability" i
+\operatorname{Pr}\left[$1\right]$0
+endsnippet
+
 snippet thm "Theorm" !b
 \begin{theorem}[$1]
-$2
+	$2
 \end{theorem}$0
+endsnippet
+
+snippet Var "Variance" i
+\operatorname{Var}\left[$1\right]$0
 endsnippet
 
 snippet () "\Paren{...}" i
