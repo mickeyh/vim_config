@@ -73,6 +73,11 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 """ Eclim.
 " Make Eclim play nicely with YouCompleteMe.
 let g:EclimCompletionMethod='omnifunc'
+" Open hierarchies in a vertical split.
+let g:EclimJavaHierarchyDefaultAction='vsplit'
+let g:EclimJavaCallHierarchyDefaultAction='vsplit'
+" If JavaSearch returns a single result, open it in the current window.
+let g:EclimJavaSearchSingleResult='edit'
 """ Gundo.
 " Open Gundo plugin.
 map <leader>u :GundoToggle<CR>
