@@ -13,11 +13,11 @@ def complete(root, possible_matches):
 endglobal
 
 snippet Cov "Covariance" i
-\operatorname{Cov}\left[$1\right]$0
+\on{Cov}\Brack{$1}$0
 endsnippet
 
 snippet E "Expectation" i
-\operatorname{E}\left[$1\right]$0
+\on{E}\Brack{$1}$0
 endsnippet
 
 snippet lst "Code listing." !b
@@ -32,8 +32,12 @@ snippet nl2 "l2 norm \norm{...}_2" i
 \norm{${VISUAL}$1}_2$0
 endsnippet
 
+snippet on "operatorname" i
+\on{$1}$0
+endsnippet
+
 snippet Pr "Probability" i
-\operatorname{Pr}\left[$1\right]$0
+\on{Pr}\Brack{$1}$0
 endsnippet
 
 snippet thm "Theorm" !b
@@ -43,7 +47,7 @@ snippet thm "Theorm" !b
 endsnippet
 
 snippet Var "Variance" i
-\operatorname{Var}\left[$1\right]$0
+\on{Var}\Brack{$1}$0
 endsnippet
 
 snippet () "\Paren{...}" i
@@ -58,6 +62,6 @@ snippet [] "Outline math" i
 \Brack{${VISUAL}$1}$0
 endsnippet
 
-snippet || "\abs{...}" i
-\abs{${VISUAL}$1}$0
+snippet || "\Abs{...}" i
+\Abs{${VISUAL}$1}$0
 endsnippet
