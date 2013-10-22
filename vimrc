@@ -30,6 +30,9 @@ set wildmode=list:longest
 set number
 " Assume .tex files are latex files.
 let g:tex_flavor='latex'
+" Use modelines.
+set modeline
+set modelines=5
 
 """" 3. Key Bindings. {{{1
 let mapleader='\'
