@@ -20,6 +20,16 @@ snippet E "Expectation" i
 \on{E}\Brack{${VISUAL}$1}$0
 endsnippet
 
+snippet P "Probability" i
+\PP\Brack{${VISUAL}$1}$0
+endsnippet
+
+snippet dfn "Definition" !b
+\begin{definition}[$1]
+	$2
+\end{definition}$0
+endsnippet
+
 snippet lst "Code listing." !b
 \lstinputlisting[style=$1`!p snip.rv=complete(t[1], ['Matlab','Python'])`]{${2:path/to/file}}$0
 endsnippet
@@ -40,7 +50,7 @@ snippet Pr "Probability" i
 \on{Pr}\Brack{${VISUAL}$1}$0
 endsnippet
 
-snippet thm "Theorm" !b
+snippet thm "Theorem" !b
 \begin{theorem}[$1]
 	$2
 \end{theorem}$0
@@ -64,4 +74,8 @@ endsnippet
 
 snippet || "\Abs{...}" i
 \Abs{${VISUAL}$1}$0
+endsnippet
+
+snippet <> "\Seq{...}" i
+\seq{${VISUAL}$1}$0
 endsnippet
