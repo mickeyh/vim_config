@@ -104,7 +104,7 @@ let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
 let g:UltiSnipsEditSplit="horizontal"
 """ YouCompleteMe.
 " Only enable ycm in these filetypes.
-let g:ycm_filetype_whitelist={'c':1,'cpp':1,'java':1,'matlab':1,'python':1}
+let g:ycm_filetype_whitelist={'c':1,'cpp':1,'java':1,'matlab':1,'python':1,'r':1}
 let g:ycm_filetype_blacklist={'help':1}
 " Specify a default YCM configuration file if none is found for the current project.
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_confs/default_ycm_extra_conf.py'
