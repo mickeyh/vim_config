@@ -10,12 +10,18 @@ endsnippet
 
 snippet for "for loop" b
 for ($1) {
-	$2
+	${2:${VISUAL}}
 }$0
 endsnippet
 
 snippet if "if statement" b
 if ($1) {
+	$2
+}$0
+endsnippet
+
+snippet whi "while loop" b
+while ($1) {
 	$2
 }$0
 endsnippet
