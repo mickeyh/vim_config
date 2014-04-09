@@ -34,7 +34,7 @@ let g:tex_flavor='latex'
 set modeline
 set modelines=5
 
-"""" 3. Key Bindings. {{{1
+"""" 3. Remappings. {{{1
 let mapleader='\'
 " More convenient window movement.
 noremap <C-J> <C-W>j
@@ -44,6 +44,11 @@ noremap <C-L> <C-W>l
 " More convenient movement when lines are wrapped.
 nmap j gj
 nmap k gk
+" Avoid super annoying caps save/quit errors.
+command WQ wq
+command Wq wq
+command W w
+command Q q
 
 """" 4. Vim Appearance. {{{1
 " Colorscheme.
