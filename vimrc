@@ -44,6 +44,8 @@ noremap <C-L> <C-W>l
 " More convenient movement when lines are wrapped.
 nmap j gj
 nmap k gk
+" Turn off seach hilighting with <CR>.
+nnoremap <CR> :nohlsearch<CR>
 " Avoid super annoying caps save/quit errors.
 command WQ wq
 command Wq wq
