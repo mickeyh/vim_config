@@ -45,7 +45,7 @@ noremap <C-L> <C-W>l
 nmap j gj
 nmap k gk
 " Turn off seach hilighting with <CR>.
-nnoremap <CR> :nohlsearch<CR>
+nnoremap <CR> :nohlsearch<CR><CR>
 " Avoid super annoying caps save/quit errors.
 command WQ wq
 command Wq wq
