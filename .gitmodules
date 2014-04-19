@@ -37,3 +37,9 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/vim2hs"]
+	path = bundle/vim2hs
+	url = https://github.com/dag/vim2hs.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git

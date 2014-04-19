@@ -34,7 +34,7 @@ let g:tex_flavor='latex'
 set modeline
 set modelines=5
 
-"""" 3. Key Bindings. {{{1
+"""" 3. Remappings. {{{1
 let mapleader='\'
 " More convenient window movement.
 noremap <C-J> <C-W>j
@@ -44,6 +44,13 @@ noremap <C-L> <C-W>l
 " More convenient movement when lines are wrapped.
 nmap j gj
 nmap k gk
+" Turn off seach hilighting with <CR>.
+nnoremap <CR> :nohlsearch<CR><CR>
+" Avoid super annoying caps save/quit errors.
+command WQ wq
+command Wq wq
+command W w
+command Q q
 
 """" 4. Vim Appearance. {{{1
 " Colorscheme.
@@ -104,7 +111,7 @@ let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
 let g:UltiSnipsEditSplit="horizontal"
 """ YouCompleteMe.
 " Only enable ycm in these filetypes.
-let g:ycm_filetype_whitelist={'c':1,'cpp':1,'java':1,'matlab':1,'python':1,'r':1}
+let g:ycm_filetype_whitelist={'c':1,'cpp':1,'haskell':1,'java':1,'matlab':1,'python':1,'r':1}
 let g:ycm_filetype_blacklist={'help':1}
 " Specify a default YCM configuration file if none is found for the current project.
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_confs/default_ycm_extra_conf.py'
