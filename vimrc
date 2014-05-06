@@ -117,5 +117,7 @@ let g:ycm_filetype_whitelist={'c':1,'cpp':1,'haskell':1,'java':1,'matlab':1,'pyt
 let g:ycm_filetype_blacklist={'help':1}
 " Specify a default YCM configuration file if none is found for the current project.
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_confs/default_ycm_extra_conf.py'
+" Enable autocompletions with haskell.
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 " vim: set ft=vim foldmethod=marker ts=3 sw=3 tw=80 et :
