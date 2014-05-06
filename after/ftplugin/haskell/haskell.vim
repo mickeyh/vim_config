@@ -9,12 +9,16 @@
 setlocal omnifunc=necoghc#omnifunc
 
 """" 1. Key Bindings.
-" ghcmod.
-nnoremap <buffer> <silent> <leader>C :GhcModLint<CR>
+""" ghcmod.
+nnoremap <buffer> <leader>C :GhcModLint<CR>
+noremap <buffer> <leader>T :GhcModType<CR>
+" Chain clearing of hilighted things on <CR>.
+" TODO: There must be a better way than redoing nohlsearch.
+nmap <CR> <CR>:GhcModTypeClear<CR>:nohlsearch<CR>
 
 """" 2. Vim Appearance.
-" Wrap lines longer than 100 characters.
-setlocal wrap linebreak textwidth=100
+" Wrap lines longer than 80 characters.
+setlocal wrap linebreak textwidth=80
 " Hilight 101st column.
 setlocal colorcolumn=+1
 " Tabs.
