@@ -42,10 +42,10 @@ noremap <C-K> <C-W>k
 noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 " More convenient movement when lines are wrapped.
-nmap j gj
-nmap k gk
+nnoremap j gj
+nnoremap k gk
 " Turn off seach hilighting with <CR>.
-nnoremap <CR> :nohlsearch<CR><CR>
+nnoremap <CR> <CR>:nohlsearch<CR>
 " Avoid super annoying caps save/quit errors.
 command WA wa
 command Wa wa
@@ -79,10 +79,10 @@ set listchars=tab:>·,trail:·
 set nocursorline nocursorcolumn
 
 """" 5. Plugin Configuration. {{{1
-""" Ack.
+""" Ack. {{{2
 " Use ag instead of ack.
 let g:ackprg = 'ag --nogroup --nocolor --column'
-""" Eclim.
+""" Eclim. {{{2
 " Make Eclim play nicely with YouCompleteMe.
 let g:EclimCompletionMethod='omnifunc'
 " Open hierarchies in a vertical split.
@@ -90,19 +90,24 @@ let g:EclimJavaHierarchyDefaultAction='vsplit'
 let g:EclimJavaCallHierarchyDefaultAction='vsplit'
 " If JavaSearch returns a single result, open it in the current window.
 let g:EclimJavaSearchSingleResult='edit'
-""" Gundo.
+""" Gundo. {{{2
 " Open Gundo plugin.
-map <leader>u :GundoToggle<CR>
-""" Indent Guides plugin.
+nmap <leader>u :GundoToggle<CR>
+""" Indent Guides plugin. {{{2
 let g:indent_guides_guide_size=1
-""" Tabular.
+""" Syntastic plugin. {{{2
+" Toggle syntastic autochecking on write.
+nmap <buffer> <leader>S :SyntasticToggleMode<CR>
+" Force a syntax check (useful for passive_filetypes).
+nmap <buffer> <leader>c :SyntasticCheck<CR>:Errors<CR>
+""" Tabular. {{{2
 map <leader>a :Tabularize
-""" Tagbar.
+""" Tagbar. {{{2
 " Open tagbar plugin.
-map <leader>g :TagbarToggle<CR>
+nmap <leader>g :TagbarToggle<CR>
 let g:tagbar_autoclose=1            " Tagbar window closes on tag jump.
 let g:tagbar_autofocus=1            " Cursor moves to Tagbar window when it opens.
-""" UltiSnips.
+""" UltiSnips. {{{2
 " Expand <c-f>, list snippets <c-tab>, forward <c-g>, backward <c-b>.
 let g:UltiSnipsExpandTrigger="<c-f>"
 let g:UltiSnipsJumpForwardTrigger="<c-g>"
@@ -111,11 +116,13 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
 " :UltiSnipsEdit will open the snippet file in a horizontal split.
 let g:UltiSnipsEditSplit="horizontal"
-""" YouCompleteMe.
+""" YouCompleteMe. {{{2
 " Only enable ycm in these filetypes.
 let g:ycm_filetype_whitelist={'c':1,'cpp':1,'haskell':1,'java':1,'matlab':1,'python':1,'r':1}
 let g:ycm_filetype_blacklist={'help':1}
 " Specify a default YCM configuration file if none is found for the current project.
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_confs/default_ycm_extra_conf.py'
+" Enable autocompletions with haskell.
+let g:ycm_semantic_triggers = {'haskell':['.']}
 
 " vim: set ft=vim foldmethod=marker ts=3 sw=3 tw=80 et :
