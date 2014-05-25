@@ -1,3 +1,8 @@
 snippet todo "TODO" b
 -- TODO(`echo $USER`): ${1:desc} (`date +%F`)
 endsnippet
+
+snippet lprag "LANGUAGE pragma" b
+{-# LANGUAGE ${1:pragma} #-}
+$0
+endsnippet
