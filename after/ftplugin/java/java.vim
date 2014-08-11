@@ -5,6 +5,7 @@
 " 3. Plugin Configuration
 
 """" 0. Vim Behaviour.
+set wildignore+=*.class,*.apk,*.apk.d
 
 """" 1. Key Bindings.
 " Eclim.

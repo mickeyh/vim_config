@@ -25,6 +25,8 @@ set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
 " Make filename completion act like bash.
 set wildmode=list:longest
+" Ignore certain glob patterns.
+set wildignore=*.o,.git,.hg,*.png,*.jpg
 " Use numbering. Don't use relative numbering as this is slow (especially in
 " .tex files).
 set number

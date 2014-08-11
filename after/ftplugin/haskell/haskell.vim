@@ -7,6 +7,8 @@
 """" 0. Vim Behaviour.
 " Uset necoghc completion backend.
 setlocal omnifunc=necoghc#omnifunc
+" Ignore dist subdirectory.
+set wildignore+=dist
 
 """" 1. Key Bindings.
 """ ghcmod.
