@@ -27,6 +27,8 @@ set completeopt=longest,menuone
 set wildmode=list:longest
 " Ignore certain glob patterns.
 set wildignore=*.o,.git,.hg,*.png,*.jpg
+" Common files in Android projects.
+set wildignore+=*.class,*.apk,*.apk.d
 " Use numbering. Don't use relative numbering as this is slow (especially in
 " .tex files).
 set number
