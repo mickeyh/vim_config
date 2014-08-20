@@ -11,7 +11,9 @@
 nnoremap <buffer> <silent> <c-]> :JavaSearch<CR>
 nnoremap <buffer> <leader>s :JavaSearch 
 nnoremap <buffer> <silent> <leader>i :JavaImportOrganize<CR>
+" Overriding the syntastic error check is ok because it happens on save.
 nnoremap <buffer> <silent> <leader>c :JavaDocComment<CR>
+nnoremap <buffer> <silent> <leader>C :ProjectProblems<CR>
 
 """" 2. Vim Appearance.
 " Wrap lines longer than 100 characters.
