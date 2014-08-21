@@ -6,7 +6,10 @@ call pathogen#helptags()
 
 """" 1. Locale. {{{1
 
-"""" 2. Vim Behaviour. {{{1
+"""" 2. Import Helper Functions. {{{1
+source helpers/HighlightNearCursor.vim
+
+"""" 3. Vim Behaviour. {{{1
 " Allow switching away from unsaved buffers.
 set hidden
 " Reload files automatically if they have changed.
@@ -38,7 +41,7 @@ let g:tex_flavor='latex'
 set modeline
 set modelines=5
 
-"""" 3. Remappings. {{{1
+"""" 4. Remappings. {{{1
 let mapleader='\'
 " More convenient window movement.
 noremap <C-J> <C-W>j
@@ -48,8 +51,12 @@ noremap <C-L> <C-W>l
 " More convenient movement when lines are wrapped.
 nnoremap j gj
 nnoremap k gk
+" Improve search hilighting.
+noremap n n:call HighlightNearCursor()<CR>
+noremap N N:call HighlightNearCursor()<CR>
+noremap * *:call HighlightNearCursor()<CR>
 " Turn off seach hilighting with <CR>.
-nnoremap <CR> <CR>:nohlsearch<CR>
+nnoremap <CR> <CR>:nohlsearch<CR>:call ClearHighlightNearCursor()<CR>
 " Avoid super annoying caps save/quit errors.
 command WA wa
 command Wa wa
@@ -58,7 +65,7 @@ command Wq wq
 command W w
 command Q q
 
-"""" 4. Vim Appearance. {{{1
+"""" 5. Vim Appearance. {{{1
 " Colorscheme.
 colorscheme zenburn
 " Search settings
@@ -82,7 +89,7 @@ set listchars=tab:>·,trail:·
 " files).
 set nocursorline nocursorcolumn
 
-"""" 5. Plugin Configuration. {{{1
+"""" 6. Plugin Configuration. {{{1
 """ Ack. {{{2
 " Use ag instead of ack.
 let g:ackprg = 'ag --nogroup --nocolor --column'
