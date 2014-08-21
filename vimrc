@@ -99,6 +99,8 @@ let g:EclimJavaSearchSingleResult='edit'
 nmap <leader>u :GundoToggle<CR>
 """ Indent Guides plugin. {{{2
 let g:indent_guides_guide_size=1
+""" Multiple Cursors plugin. {{{2
+let g:multi_cursor_exit_from_insert_mode=0
 """ Syntastic plugin. {{{2
 " Toggle syntastic autochecking on write.
 nmap <buffer> <leader>S :SyntasticToggleMode<CR>
