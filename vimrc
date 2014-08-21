@@ -52,7 +52,6 @@ noremap <C-L> <C-W>l
 nnoremap j gj
 nnoremap k gk
 " Improve search hilighting.
-" TODO: Need to figure out how to support / and ?
 noremap n n:call HighlightNearCursor()<CR>
 noremap N N:call HighlightNearCursor()<CR>
 noremap * *:call HighlightNearCursor()<CR>
