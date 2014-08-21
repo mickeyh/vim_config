@@ -61,3 +61,6 @@
 	path = bundle/vim-multiple-cursors
 	ignore = untracked
 	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "bundle/vim-visual-star-search"]
+	path = bundle/vim-visual-star-search
+	url = https://github.com/nelstrom/vim-visual-star-search.git
