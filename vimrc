@@ -52,11 +52,14 @@ noremap <C-L> <C-W>l
 nnoremap j gj
 nnoremap k gk
 " Improve search hilighting.
+" TODO: Need to figure out how to support / and ?
 noremap n n:call HighlightNearCursor()<CR>
 noremap N N:call HighlightNearCursor()<CR>
 noremap * *:call HighlightNearCursor()<CR>
-" Turn off seach hilighting with <CR>.
+noremap # #:call HighlightNearCursor()<CR>
+" Turn off seach hilighting with <CR> or <ESC>.
 nnoremap <CR> <CR>:nohlsearch<CR>:call ClearHighlightNearCursor()<CR>
+nnoremap <ESC> <ESC>:nohlsearch<CR>:call ClearHighlightNearCursor()<CR>
 " Avoid super annoying caps save/quit errors.
 command WA wa
 command Wa wa

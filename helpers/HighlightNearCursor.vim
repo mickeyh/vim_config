@@ -8,5 +8,7 @@ endfunction
 
 function ClearHighlightNearCursor()
    match None
-   unlet s:highlightcursor
+   if exists("s:highlightcursor")
+      unlet s:highlightcursor
+   endif
 endfunction
