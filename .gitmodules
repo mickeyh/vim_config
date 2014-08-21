@@ -16,6 +16,7 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+	ignore = untracked
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
@@ -55,6 +56,8 @@
 [submodule "bundle/vim-localrc"]
 	path = bundle/vim-localrc
 	url = https://github.com/thinca/vim-localrc.git
+	ignore = untracked
 [submodule "bundle/vim-multiple-cursors"]
 	path = bundle/vim-multiple-cursors
+	ignore = untracked
 	url = https://github.com/terryma/vim-multiple-cursors.git
