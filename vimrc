@@ -6,10 +6,7 @@ call pathogen#helptags()
 
 """" 1. Locale. {{{1
 
-"""" 2. Import Helper Functions. {{{1
-source helpers/HighlightNearCursor.vim
-
-"""" 3. Vim Behaviour. {{{1
+"""" 2. Vim Behaviour. {{{1
 " Allow switching away from unsaved buffers.
 set hidden
 " Reload files automatically if they have changed.
@@ -41,7 +38,7 @@ let g:tex_flavor='latex'
 set modeline
 set modelines=5
 
-"""" 4. Remappings. {{{1
+"""" 3. Remappings. {{{1
 let mapleader='\'
 " More convenient window movement.
 noremap <C-J> <C-W>j
@@ -69,7 +66,7 @@ command Wq wq
 command W w
 command Q q
 
-"""" 5. Vim Appearance. {{{1
+"""" 4. Vim Appearance. {{{1
 " Colorscheme.
 colorscheme zenburn
 " Search settings
@@ -93,7 +90,7 @@ set listchars=tab:>·,trail:·
 " files).
 set nocursorline nocursorcolumn
 
-"""" 6. Plugin Configuration. {{{1
+"""" 5. Plugin Configuration. {{{1
 """ Ack. {{{2
 " Use ag instead of ack.
 let g:ackprg = 'ag --nogroup --nocolor --column'
