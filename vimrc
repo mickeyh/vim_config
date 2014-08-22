@@ -52,13 +52,15 @@ noremap <C-L> <C-W>l
 nnoremap j gj
 nnoremap k gk
 " Improve search hilighting.
-noremap n n:call HighlightNearCursor()<CR>
-noremap N N:call HighlightNearCursor()<CR>
-noremap * *:call HighlightNearCursor()<CR>
-noremap # #:call HighlightNearCursor()<CR>
+noremap n n:set cursorline<CR>
+noremap N N:set cursorline<CR>
+noremap * *:set cursorline<CR>
+noremap # #:set cursorline<CR>
+noremap / :set cursorline<CR>/
+noremap ? :set cursorline<CR>?
 " Turn off seach hilighting with <CR> or <ESC>.
-nnoremap <CR> <CR>:nohlsearch<CR>:call ClearHighlightNearCursor()<CR>
-nnoremap <ESC> <ESC>:nohlsearch<CR>:call ClearHighlightNearCursor()<CR>
+nnoremap <CR> <CR>:nohlsearch<CR>:set nocursorline<CR>
+nnoremap <ESC> <ESC>:nohlsearch<CR>:set nocursorline<CR>
 " Avoid super annoying caps save/quit errors.
 command WA wa
 command Wa wa
@@ -109,7 +111,11 @@ nmap <leader>u :GundoToggle<CR>
 """ Indent Guides plugin. {{{2
 let g:indent_guides_guide_size=1
 """ Multiple Cursors plugin. {{{2
-let g:multi_cursor_exit_from_insert_mode=0
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<C-q>'
 """ Syntastic plugin. {{{2
 " Toggle syntastic autochecking on write.
 nmap <buffer> <leader>S :SyntasticToggleMode<CR>

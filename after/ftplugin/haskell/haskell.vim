@@ -15,8 +15,8 @@ set wildignore+=dist
 nnoremap <buffer> <leader>C :GhcModLint<CR>
 noremap <buffer> <leader>T :GhcModType<CR>
 " Chain clearing of hilighted things on <CR>.
-" TODO: There must be a better way than redoing nohlsearch.
-nmap <CR> <CR>:GhcModTypeClear<CR>:nohlsearch<CR>:call ClearHighlightNearCursor()<CR>
+" TODO: There must be a better way than redoing nohlsearch and nocursorline.
+nmap <CR> <CR>:GhcModTypeClear<CR>:nohlsearch<CR>:set nocursorline<CR>
 
 """" 2. Vim Appearance.
 " Wrap lines longer than 80 characters.
