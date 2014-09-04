@@ -94,6 +94,8 @@ set nocursorline nocursorcolumn
 """ Ack. {{{2
 " Use ag instead of ack.
 let g:ackprg = 'ag --nogroup --nocolor --column'
+nmap <silent> <leader>A :Ack<C-R><C-W><CR>
+nmap <leader>a :Ack 
 """ Eclim. {{{2
 " Make Eclim play nicely with YouCompleteMe.
 let g:EclimCompletionMethod='omnifunc'
@@ -119,7 +121,7 @@ nmap <buffer> <leader>S :SyntasticToggleMode<CR>
 " Force a syntax check (useful for passive_filetypes).
 nmap <buffer> <leader>c :SyntasticCheck<CR>:Errors<CR>
 """ Tabular. {{{2
-map <leader>a :Tabularize
+map <leader>T :Tabularize
 """ Tagbar. {{{2
 " Open tagbar plugin.
 nmap <leader>g :TagbarToggle<CR>
