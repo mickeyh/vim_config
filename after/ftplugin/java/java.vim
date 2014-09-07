@@ -25,6 +25,7 @@ setlocal sw=3 ts=3 et
 " Code folding.
 setlocal foldmethod=syntax
 setlocal foldnestmax=2
+setlocal foldlevel=1
 set nofoldenable
 
 """" 3. Plugin Configuration.
