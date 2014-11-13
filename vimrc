@@ -94,7 +94,7 @@ set nocursorline nocursorcolumn
 """ Ack. {{{2
 " Use ag instead of ack.
 let g:ackprg = 'ag --nogroup --nocolor --column'
-nmap <silent> <leader>A :Ack<C-R><C-W><CR>
+nmap <silent> <leader>A :Ack <C-R><C-W><CR>
 nmap <leader>a :Ack 
 """ Eclim. {{{2
 " Make Eclim play nicely with YouCompleteMe.
