@@ -16,7 +16,7 @@ set wrap linebreak textwidth=100
 " Hilight 101st column.
 set colorcolumn=+1
 " Tabs.
-set sw=3 ts=3 et
+set sw=3 ts=3 sts=3 et
 " Code folding.
 " set foldmethod=indent " This seems annoying right now.
 set foldnestmax=2
