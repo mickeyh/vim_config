@@ -37,9 +37,13 @@ let g:tex_flavor='latex'
 " Use modelines.
 set modeline
 set modelines=5
+" No spell checking by default. Use English as language.
+set nospell spelllang=en_us
 
 """" 3. Remappings. {{{1
 let mapleader='\'
+" Spell checking.
+map <silent> <leader>L :setlocal spell!<CR>
 " More convenient window movement.
 noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
@@ -55,7 +59,7 @@ noremap * *:set cursorline<CR>
 noremap # #:set cursorline<CR>
 noremap / :set cursorline<CR>/
 noremap ? :set cursorline<CR>?
-" Turn off seach hilighting with <CR> or <ESC>.
+" Turn off search hilighting with <CR> or <ESC>.
 nnoremap <CR> <CR>:nohlsearch<CR>:set nocursorline<CR>
 nnoremap <ESC> <ESC>:nohlsearch<CR>:set nocursorline<CR>
 " Avoid super annoying caps save/quit errors.
