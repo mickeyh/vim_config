@@ -29,6 +29,8 @@ set wildmode=list:longest
 set wildignore=*.o,.git,.hg,*.png,*.jpg
 " Common files in Android projects.
 set wildignore+=*.class,*.apk,*.apk.d
+" Common files in Python projects.
+set wildignore+=*.pyc
 " Use numbering. Don't use relative numbering as this is slow (especially in
 " .tex files).
 set number
