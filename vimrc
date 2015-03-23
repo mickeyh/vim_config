@@ -1,8 +1,48 @@
-"""" 0. Pathogen. {{{1
-" Set up pathogen.
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+"""" 0. NeoBundle. {{{1
+if has('vim_starting')
+  if &compatible
+    set nocompatible
+  endif
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'dag/vim2hs'
+NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'eagletmt/neco-ghc'
+NeoBundle 'git://git.wincent.com/command-t.git', { 'build' : {
+         \ 'linux' : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"',
+         \ 'mac'   : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"'}}
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'nelstrom/vim-visual-star-search'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/vimproc', {'build': {
+         \ 'linux' : 'make',
+         \ 'mac'   : 'make -f make_mac.mak'}}
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'sjl/gundo.vim'
+NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'thinca/vim-fontzoom'
+NeoBundle 'thinca/vim-localrc'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'Valloric/ListToggle'
+NeoBundle 'Valloric/YouCompleteMe', {'build' : {
+         \ 'linux' : './install.sh --clang-completer --system-libclang --system-boost',
+         \ 'mac'   : './install.sh --clang-completer'}}
+
+call neobundle#end()
+filetype plugin indent on
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 """" 1. Locale. {{{1
 
@@ -15,7 +55,6 @@ set autoread
 set directory=~/.backup,.
 " Use filetype-based syntax hilighting, ftplugins, and indentation.
 syntax on
-filetype plugin indent on
 " Make marks work on character positions by default, and put mark at top of screen.
 nnoremap <expr> ' printf("`%czz", getchar())
 nnoremap <expr> ` printf("'%czz", getchar())
@@ -91,7 +130,7 @@ set laststatus=2
 set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
 " Highlight whitespace.
 set list
-set listchars=tab:>·,trail:·
+set listchars=tab:>Â·,trail:Â·
 " Don't hilight cursor line or column. These are slow (especially in .tex
 " files).
 set nocursorline nocursorcolumn
@@ -144,7 +183,7 @@ let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
 let g:UltiSnipsEditSplit="horizontal"
 """ YouCompleteMe. {{{2
 " Make sure YCM uses system Python (not Anaconda Python).
-let g:ycm_path_to_python_interpreter='/usr/bin/python'
+let g:ycm_path_to_python_interpreter='/usr/bin/python2'
 " Only enable ycm in these filetypes.
 let g:ycm_filetype_whitelist={'c':1,'cpp':1,'haskell':1,'java':1,'matlab':1,'python':1,'r':1}
 let g:ycm_filetype_blacklist={'help':1}
