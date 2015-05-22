@@ -21,6 +21,9 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'nelstrom/vim-visual-star-search'
+NeoBundle 'python-rope/ropevim', {'build': {
+         \ 'linux' : 'pip install ropevim',
+         \ 'mac'   : 'pip install ropevim'}}
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimproc', {'build': {
          \ 'linux' : 'make',
@@ -36,8 +39,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'Valloric/ListToggle'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {
-         \ 'linux' : './install.sh --clang-completer --system-libclang --system-boost',
-         \ 'mac'   : './install.sh --clang-completer'}}
+         \ 'linux' : './install.sh --clang-completer --system-libclang --system-boost'}}
 
 call neobundle#end()
 filetype plugin indent on
