@@ -144,6 +144,9 @@ set nocursorline nocursorcolumn
 let g:ackprg = 'ag --nogroup --nocolor --column'
 nmap <silent> <leader>A :Ack <C-R><C-W><CR>
 nmap <leader>a :Ack 
+""" Command-T. {{{2
+" Use Vim's pwd as the search root.
+let g:CommandTTraverseSCM='pwd'
 """ Eclim. {{{2
 " Make Eclim play nicely with YouCompleteMe.
 let g:EclimCompletionMethod='omnifunc'
