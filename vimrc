@@ -126,6 +126,8 @@ set smartindent
 set tabstop=3
 set shiftwidth=3
 set expandtab
+" Default to 100 character lines.
+set textwidth=100
 " Make statusline appear even with only single window.
 set laststatus=2
 " Add git branch to statusline.
