@@ -24,6 +24,9 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'nelstrom/vim-visual-star-search'
+NeoBundle 'python-rope/ropevim', {'build': {
+         \ 'linux' : 'pip install ropevim',
+         \ 'mac'   : 'pip install ropevim'}}
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimproc', {'build': {
          \ 'linux' : 'make',
@@ -39,8 +42,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'Valloric/ListToggle'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {
-         \ 'linux' : './install.sh --clang-completer --system-libclang --system-boost',
-         \ 'mac'   : './install.sh --clang-completer'}}
+         \ 'linux' : './install.sh --clang-completer --system-libclang --system-boost'}}
 
 call neobundle#end()
 filetype plugin indent on
@@ -127,6 +129,8 @@ set smartindent
 set tabstop=3
 set shiftwidth=3
 set expandtab
+" Default to 100 character lines.
+set textwidth=100
 " Make statusline appear even with only single window.
 set laststatus=2
 " Add git branch to statusline.
@@ -145,6 +149,9 @@ set nocursorline nocursorcolumn
 let g:ackprg = 'ag --nogroup --nocolor --column'
 nmap <silent> <leader>A :Ack <C-R><C-W><CR>
 nmap <leader>a :Ack 
+""" Command-T. {{{2
+" Use Vim's pwd as the search root.
+let g:CommandTTraverseSCM='pwd'
 """ Eclim. {{{2
 " Make Eclim play nicely with YouCompleteMe.
 let g:EclimCompletionMethod='omnifunc'
