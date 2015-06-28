@@ -28,9 +28,14 @@ NeoBundle 'python-rope/ropevim', {'build': {
          \ 'linux' : 'pip install ropevim',
          \ 'mac'   : 'pip install ropevim'}}
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/vimproc', {'build': {
-         \ 'linux' : 'make',
-         \ 'mac'   : 'make -f make_mac.mak'}}
+NeoBundle 'Shougo/vimproc.vim', {
+         \ 'build' : {
+         \     'windows' : 'make -f make_mingw32.mak',
+         \     'cygwin' : 'make -f make_cygwin.mak',
+         \     'mac' : 'make -f make_mac.mak',
+         \     'unix' : 'make -f make_unix.mak',
+         \    },
+         \ }
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'terryma/vim-multiple-cursors'
