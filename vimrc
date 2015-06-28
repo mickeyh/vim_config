@@ -9,6 +9,9 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+" Make sure YouCompleteMe checkout doesn't time out.
+let g:neobundle#install_process_timeout=18000
+
 NeoBundle 'dag/vim2hs'
 NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'eagletmt/neco-ghc'
