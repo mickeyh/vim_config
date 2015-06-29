@@ -1,5 +1,8 @@
 A vim configuration.
 
+Requirements:
+   * `Adobe Source Code Pro` font installed (`adobe-source-code-pro-fonts` package).
+
 Initial set up:
    1. `git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim`
    2. Comment out any calls to `fugitive` in `~/.vim/vimrc`.
