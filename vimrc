@@ -13,6 +13,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 let g:neobundle#install_process_timeout=18000
 
 NeoBundle 'dag/vim2hs'
+NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'eagletmt/neco-ghc'
 NeoBundle 'fatih/vim-go'
@@ -167,6 +168,8 @@ let g:EclimJavaSearchSingleResult='edit'
 nmap <leader>u :GundoToggle<CR>
 """ Indent Guides plugin. {{{2
 let g:indent_guides_guide_size=1
+""" jedi-vim. {{{2
+let g:jedi#goto_command='<C-]>'
 """ Multiple Cursors plugin. {{{2
 let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_next_key='<C-n>'
@@ -198,8 +201,8 @@ let g:UltiSnipsEditSplit="horizontal"
 " Make sure YCM uses system Python (not Anaconda Python).
 let g:ycm_path_to_python_interpreter='/usr/bin/python2'
 " Only enable ycm in these filetypes.
-let g:ycm_filetype_whitelist={'c':1,'cpp':1,'haskell':1,'java':1,'matlab':1,'python':1,'r':1}
-let g:ycm_filetype_blacklist={'help':1}
+let g:ycm_filetype_whitelist={'c':1,'cpp':1,'haskell':1,'java':1,'matlab':1,'r':1}
+let g:ycm_filetype_blacklist={'help':1,'python':1}
 " Specify a default YCM configuration file if none is found for the current project.
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_confs/default_ycm_extra_conf.py'
 " Enable autocompletions with haskell.

@@ -20,8 +20,6 @@ set sw=3 ts=3 sts=3 et
 " Code folding.
 " set foldmethod=indent " This seems annoying right now.
 set foldnestmax=2
-" Set the default code completion function.
-set omnifunc=pythoncomplete#Complete
 " Show line numbers.
 set number
 
