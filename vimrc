@@ -24,9 +24,6 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'nelstrom/vim-visual-star-search'
-NeoBundle 'python-rope/ropevim', {'build': {
-         \ 'linux' : 'pip install ropevim',
-         \ 'mac'   : 'pip install ropevim'}}
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimproc.vim', {
          \ 'build' : {
