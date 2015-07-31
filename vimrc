@@ -24,6 +24,7 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'nelstrom/vim-markdown-folding'
 NeoBundle 'nelstrom/vim-visual-star-search'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimproc.vim', {
