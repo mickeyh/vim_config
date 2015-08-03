@@ -20,6 +20,7 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'git://git.wincent.com/command-t.git', { 'build' : {
          \ 'linux' : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"',
          \ 'mac'   : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"'}}
+NeoBundle 'Glench/Vim-Jinja2-Syntax.git'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
