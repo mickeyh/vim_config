@@ -129,8 +129,8 @@ set incsearch " jump to best fit
 " Tab settings
 set autoindent
 set smartindent
-set tabstop=3
-set shiftwidth=3
+set tabstop=4
+set shiftwidth=4
 set expandtab
 " Default to 100 character lines.
 set textwidth=100
