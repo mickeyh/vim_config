@@ -20,10 +20,12 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'git://git.wincent.com/command-t.git', { 'build' : {
          \ 'linux' : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"',
          \ 'mac'   : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"'}}
+NeoBundle 'Glench/Vim-Jinja2-Syntax.git'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'nelstrom/vim-markdown-folding'
 NeoBundle 'nelstrom/vim-visual-star-search'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimproc.vim', {
