@@ -47,7 +47,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'Valloric/ListToggle'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {
-         \ 'linux' : './install.sh --clang-completer --system-libclang --system-boost'}}
+         \ 'linux' : 'git checkout master && ./install.sh --clang-completer --system-libclang --system-boost'}}
 
 call neobundle#end()
 filetype plugin indent on
