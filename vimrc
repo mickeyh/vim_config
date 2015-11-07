@@ -27,6 +27,7 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'nelstrom/vim-markdown-folding'
 NeoBundle 'nelstrom/vim-visual-star-search'
+NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimproc.vim', {
          \ 'build' : {
@@ -143,7 +144,7 @@ set laststatus=2
 set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
 " Highlight whitespace.
 set list
-set listchars=tab:>·,trail:·
+set listchars=tab:>·
 " Don't hilight cursor line or column. These are slow (especially in .tex
 " files).
 set nocursorline nocursorcolumn

@@ -27,3 +27,6 @@ let g:go_highlight_build_constraints = 1
 
 " Add $GOPATH to vim path so :find and gf work.
 set path+=$GOPATH/src/**
+
+" In Go we don't want to see tabs, so we disable list.
+set nolist
