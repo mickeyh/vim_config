@@ -32,4 +32,4 @@ set path+=$GOPATH/src/**
 set nolist
 " If we do want to see listchars we only care about tabs because these are the only common
 " whitespace character that can be misused.
-set listchars=tabs:>\ 
+set listchars=tab:>\ 
