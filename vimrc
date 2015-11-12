@@ -24,10 +24,12 @@ NeoBundle 'Glench/Vim-Jinja2-Syntax.git'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'mxw/vim-jsx'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'nelstrom/vim-markdown-folding'
 NeoBundle 'nelstrom/vim-visual-star-search'
 NeoBundle 'ntpeters/vim-better-whitespace'
+NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimproc.vim', {
          \ 'build' : {
@@ -184,6 +186,8 @@ let g:multi_cursor_quit_key='<C-q>'
 nmap <buffer> <leader>S :SyntasticToggleMode<CR>
 " Force a syntax check (useful for passive_filetypes).
 nmap <buffer> <leader>c :SyntasticCheck<CR>:Errors<CR>
+" Use JSXHint checker.
+let g:syntastic_javascript_checkers = ['jsxhint']
 """ Tabular. {{{2
 map <leader>T :Tabularize
 """ Tagbar. {{{2
@@ -200,6 +204,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
 " :UltiSnipsEdit will open the snippet file in a horizontal split.
 let g:UltiSnipsEditSplit="horizontal"
+""" vim-jsx. {{{2
+" Turn on vim-jsx in .js files.
+let g:jsx_ext_required = 0
 """ YouCompleteMe. {{{2
 " Make sure YCM uses system Python (not Anaconda Python).
 let g:ycm_path_to_python_interpreter='/usr/bin/python2'
