@@ -211,11 +211,11 @@ let g:jsx_ext_required = 0
 " Make sure YCM uses system Python (not Anaconda Python).
 let g:ycm_path_to_python_interpreter='/usr/bin/python2'
 " Only enable ycm in these filetypes.
-let g:ycm_filetype_whitelist={'c':1,'cpp':1,'haskell':1,'java':1,'matlab':1,'r':1}
+let g:ycm_filetype_whitelist={'c':1,'cpp':1,'go':1,'haskell':1,'java':1,'matlab':1,'r':1}
 let g:ycm_filetype_blacklist={'help':1,'python':1}
 " Specify a default YCM configuration file if none is found for the current project.
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_confs/default_ycm_extra_conf.py'
 " Enable autocompletions with haskell.
-let g:ycm_semantic_triggers={'haskell':['.']}
+let g:ycm_semantic_triggers={'go':['.'],'haskell':['.']}
 
 " vim: set ft=vim foldmethod=marker ts=3 sw=3 tw=80 et :
