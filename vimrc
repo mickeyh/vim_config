@@ -77,7 +77,7 @@ set completeopt=longest,menuone
 " Make filename completion act like bash.
 set wildmode=list:longest
 " Ignore certain glob patterns.
-set wildignore=*.o,.git,.hg,*.png,*.jpg
+set wildignore=.git,.hg,node_modules,*.png,*.jpg,*.o
 " Common files in Android projects.
 set wildignore+=*.class,*.apk,*.apk.d
 " Common files in Python projects.
