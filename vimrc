@@ -41,7 +41,12 @@ NeoBundle 'Shougo/vimproc.vim', {
          \ }
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'sjl/gundo.vim'
-NeoBundle 'ternjs/tern_for_vim.git'
+NeoBundle 'ternjs/tern_for_vim.git', {
+         \ 'build' : {
+         \     'mac' : 'npm install',
+         \     'unix' : 'npm install',
+         \    },
+         \ }
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'thinca/vim-fontzoom'
 NeoBundle 'thinca/vim-localrc'
@@ -214,7 +219,7 @@ let g:jsx_ext_required = 0
 " Make sure YCM uses system Python (not Anaconda Python).
 let g:ycm_path_to_python_interpreter='/usr/bin/python2'
 " Only enable ycm in these filetypes.
-let g:ycm_filetype_whitelist={'c':1,'cpp':1,'go':1,'haskell':1,'java':1,'matlab':1,'r':1}
+let g:ycm_filetype_whitelist={'c':1,'cpp':1,'go':1,'haskell':1,'java':1,'javascript':1,'matlab':1,'r':1}
 let g:ycm_filetype_blacklist={'help':1,'python':1}
 " Specify a default YCM configuration file if none is found for the current project.
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_confs/default_ycm_extra_conf.py'
