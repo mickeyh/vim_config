@@ -41,6 +41,7 @@ NeoBundle 'Shougo/vimproc.vim', {
          \ }
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'sjl/gundo.vim'
+NeoBundle 'ternjs/tern_for_vim.git'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'thinca/vim-fontzoom'
 NeoBundle 'thinca/vim-localrc'
@@ -84,6 +85,8 @@ set wildignore=*.o,.git,.hg,*.png,*.jpg
 set wildignore+=*.class,*.apk,*.apk.d
 " Common files in Python projects.
 set wildignore+=*.pyc
+" node_modules.
+set wildignore+=node_modules
 " Use numbering. Don't use relative numbering as this is slow (especially in
 " .tex files).
 set number
