@@ -11,10 +11,16 @@ nmap <Leader>dt <Plug>(go-def-tab)
 
 nmap <Leader>gd <Plug>(go-doc)
 nmap <Leader>gD <Plug>(go-doc-vertical)
+nmap <Leader>gDB <Plug>(go-doc-browser)
 
-nmap <Leader>s <Plug>(go-implements)
+nmap <Leader>i <Plug>(go-implements)
+nmap <Leader>r <Plug>(go-referrers)
 
-nmap <Leader>i <Plug>(go-info)
+nmap <Leader>ca <Plug>(go-callers)
+nmap <Leader>ce <Plug>(go-callees)
+nmap <Leader>cs <Plug>(go-callstack)
+
+nmap <Leader>T <Plug>(go-info)
 
 nmap <Leader>e <Plug>(go-rename)
 
