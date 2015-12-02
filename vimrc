@@ -184,11 +184,7 @@ let g:indent_guides_guide_size=1
 """ jedi-vim. {{{2
 let g:jedi#goto_command='<C-]>'
 """ Multiple Cursors plugin. {{{2
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<C-q>'
+let g:multi_cursor_use_default_mapping=1
 """ Syntastic plugin. {{{2
 " Toggle syntastic autochecking on write.
 nmap <buffer> <leader>S :SyntasticToggleMode<CR>

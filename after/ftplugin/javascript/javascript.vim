@@ -12,3 +12,6 @@ nmap <Leader>T :TernType<CR>
 nmap <Leader>r :TernRefs<CR>
 
 nmap <Leader>e :TernRename<CR>
+
+" Set tabs to 2.
+set shiftwidth=2 tabstop=2 softtabstop=2 expandtab
