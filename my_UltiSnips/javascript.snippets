@@ -1,0 +1,32 @@
+snippet todo "TODO" !w
+// TODO(`echo $USER`): ${1:desc} (`date +%F`)
+endsnippet
+
+snippet cl "console.log" i
+console.log($1);
+$0
+endsnippet
+
+snippet el "else statement" i
+else {
+	$1
+}$0
+endsnippet
+
+snippet for "for loop" b
+for ($1) {
+	${2:${VISUAL}}
+}$0
+endsnippet
+
+snippet if "if statement" b
+if ($1) {
+	$2
+}$0
+endsnippet
+
+snippet whi "while loop" b
+while ($1) {
+	$2
+}$0
+endsnippet
