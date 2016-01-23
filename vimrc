@@ -16,6 +16,7 @@ NeoBundle 'dag/vim2hs'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'eagletmt/ghcmod-vim'
 NeoBundle 'eagletmt/neco-ghc'
+NeoBundle 'editorconfig/editorconfig-vim.git'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'git://git.wincent.com/command-t.git', { 'build' : {
          \ 'linux' : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"',
