@@ -17,9 +17,9 @@ NeoBundleLazy 'fatih/vim-go', {
          \ 'autoload': {
          \     'filetypes': 'go'
          \ }}
-NeoBundle 'git://git.wincent.com/command-t.git', { 'build' : {
-         \ 'linux' : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"',
-         \ 'mac'   : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"'}}
+NeoBundle 'wincent/command-t', { 'build' : {
+         \ 'linux' : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"',
+         \ 'mac'   : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"'}}
 NeoBundle 'Glench/Vim-Jinja2-Syntax.git'
 NeoBundle 'godlygeek/tabular'
 NeoBundleLazy 'flowtype/vim-flow', {
