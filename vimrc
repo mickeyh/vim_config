@@ -49,7 +49,7 @@ NeoBundle 'Shougo/vimproc.vim', {
          \     'unix' : 'make -f make_unix.mak',
          \    },
          \ }
-NeoBundleLazy 'SirVer/ultisnips'
+NeoBundle 'SirVer/ultisnips'
 NeoBundleLazy 'sjl/gundo.vim'
 NeoBundle 'ternjs/tern_for_vim.git', {
          \ 'build' : {
