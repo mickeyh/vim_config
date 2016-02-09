@@ -23,6 +23,14 @@ NeoBundle 'git://git.wincent.com/command-t.git', { 'build' : {
          \ 'mac'   : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"'}}
 NeoBundle 'Glench/Vim-Jinja2-Syntax.git'
 NeoBundle 'godlygeek/tabular'
+NeoBundleLazy 'flowtype/vim-flow', {
+         \ 'autoload': {
+         \     'filetypes': 'javascript'
+         \ },
+         \ 'build': {
+         \     'mac': 'npm install -g flow-bin',
+         \     'unix': 'npm install -g flow-bin'
+         \ }}
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'mxw/vim-jsx'
