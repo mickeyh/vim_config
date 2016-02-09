@@ -12,12 +12,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Make sure YouCompleteMe checkout doesn't time out.
 let g:neobundle#install_process_timeout=18000
 
-NeoBundle 'dag/vim2hs'
-NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'eagletmt/ghcmod-vim'
-NeoBundle 'eagletmt/neco-ghc'
-NeoBundle 'editorconfig/editorconfig-vim.git'
-NeoBundle 'fatih/vim-go'
+NeoBundleLazy 'editorconfig/editorconfig-vim.git'
+NeoBundleLazy 'fatih/vim-go', {
+         \ 'autoload': {
+         \     'filetypes': 'go'
+         \ }}
 NeoBundle 'git://git.wincent.com/command-t.git', { 'build' : {
          \ 'linux' : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"',
          \ 'mac'   : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"'}}
@@ -31,14 +30,16 @@ NeoBundleLazy 'flowtype/vim-flow', {
          \     'mac': 'npm install -g flow-bin',
          \     'unix': 'npm install -g flow-bin'
          \ }}
-NeoBundle 'majutsushi/tagbar'
+NeoBundleLazy 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'mxw/vim-jsx'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'nelstrom/vim-markdown-folding'
 NeoBundle 'nelstrom/vim-visual-star-search'
 NeoBundle 'ntpeters/vim-better-whitespace'
-NeoBundle 'pangloss/vim-javascript'
+NeoBundleLazy 'pangloss/vim-javascript', {
+         \ 'autoload': {
+         \     'filetypes': 'javascript'
+         \ }}
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimproc.vim', {
          \ 'build' : {
@@ -48,17 +49,17 @@ NeoBundle 'Shougo/vimproc.vim', {
          \     'unix' : 'make -f make_unix.mak',
          \    },
          \ }
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'sjl/gundo.vim'
+NeoBundleLazy 'SirVer/ultisnips'
+NeoBundleLazy 'sjl/gundo.vim'
 NeoBundle 'ternjs/tern_for_vim.git', {
          \ 'build' : {
          \     'mac' : 'npm install',
          \     'unix' : 'npm install',
          \    },
          \ }
-NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundleLazy 'terryma/vim-multiple-cursors'
 NeoBundle 'thinca/vim-fontzoom'
-NeoBundle 'thinca/vim-localrc'
+NeoBundleLazy 'thinca/vim-localrc'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
