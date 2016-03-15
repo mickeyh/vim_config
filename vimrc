@@ -201,7 +201,7 @@ nmap <buffer> <leader>S :SyntasticToggleMode<CR>
 " Force a syntax check (useful for passive_filetypes).
 nmap <buffer> <leader>c :SyntasticCheck<CR>:Errors<CR>
 " Use JSXHint checker.
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 """ Tabular. {{{2
 map <leader>T :Tabularize
 """ Tagbar. {{{2
