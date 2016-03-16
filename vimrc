@@ -214,8 +214,6 @@ let g:tagbar_autofocus=1            " Cursor moves to Tagbar window when it open
 let g:UltiSnipsExpandTrigger="<c-f>"
 let g:UltiSnipsJumpForwardTrigger="<c-g>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-" Snippet read directory is "my_UltiSnips".
-let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
 " :UltiSnipsEdit will open the snippet file in a horizontal split.
 let g:UltiSnipsEditSplit="horizontal"
 """ vim-jsx. {{{2
