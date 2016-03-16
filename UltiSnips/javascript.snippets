@@ -2,6 +2,10 @@ snippet todo "TODO" !w
 // TODO(`echo $USER`): ${1:desc} (`date +%F`)
 endsnippet
 
+snippet c "export"
+const $0
+endsnippet
+
 snippet cl "console.log" i
 console.log($1);
 $0
@@ -13,6 +17,16 @@ else {
 }$0
 endsnippet
 
+snippet e "export" b
+export $0
+endsnippet
+
+snippet f "function"
+function $1($2) {
+	${3:${VISUAL}}
+}$0
+endsnippet
+
 snippet for "for loop" b
 for ($1) {
 	${2:${VISUAL}}
@@ -21,12 +35,22 @@ endsnippet
 
 snippet if "if statement" b
 if ($1) {
-	$2
+	${2:${VISUAL}}
 }$0
+endsnippet
+
+snippet im "import statement" b
+import { $1 } from '$2';$0
 endsnippet
 
 snippet whi "while loop" b
 while ($1) {
 	$2
+}$0
+endsnippet
+
+snippet > "lambda" i
+($1) => {
+	${2:${VISUAL}}
 }$0
 endsnippet
