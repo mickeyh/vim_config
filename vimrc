@@ -57,9 +57,9 @@ NeoBundle 'ternjs/tern_for_vim.git', {
          \     'unix' : 'npm install',
          \    },
          \ }
-NeoBundleLazy 'terryma/vim-multiple-cursors'
+NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'thinca/vim-fontzoom'
-NeoBundleLazy 'thinca/vim-localrc'
+NeoBundle 'thinca/vim-localrc'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
