@@ -186,6 +186,9 @@ let g:EclimJavaHierarchyDefaultAction='vsplit'
 let g:EclimJavaCallHierarchyDefaultAction='vsplit'
 " If JavaSearch returns a single result, open it in the current window.
 let g:EclimJavaSearchSingleResult='edit'
+""" Flow. {{{2
+" Disable Flow checking on save.
+let g:flow#enable=0
 """ Gundo. {{{2
 " Open Gundo plugin.
 nmap <leader>u :GundoToggle<CR>
