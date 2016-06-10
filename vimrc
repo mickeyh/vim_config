@@ -12,7 +12,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Make sure YouCompleteMe checkout doesn't time out.
 let g:neobundle#install_process_timeout=18000
 
-NeoBundleLazy 'editorconfig/editorconfig-vim.git'
+NeoBundle 'editorconfig/editorconfig-vim.git'
 NeoBundleLazy 'fatih/vim-go', {
          \ 'autoload': {
          \     'filetypes': 'go'
