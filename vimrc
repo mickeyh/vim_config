@@ -102,6 +102,9 @@ set wildignore+=*.class,*.apk,*.apk.d
 set wildignore+=*.pyc
 " node_modules.
 set wildignore+=node_modules
+" Ignore build dirs when Command-T-ing
+set wildignore+=build_client
+set wildignore+=build_server
 " Use numbering. Don't use relative numbering as this is slow (especially in
 " .tex files).
 set number
