@@ -19,8 +19,7 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nelstrom/vim-markdown-folding'
 NeoBundle 'nelstrom/vim-visual-star-search'
 NeoBundle 'ntpeters/vim-better-whitespace'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'sheerun/vim-polyglot'
+NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'Shougo/vimproc.vim', {
          \ 'build' : {
          \     'windows' : 'make -f make_mingw32.mak',
