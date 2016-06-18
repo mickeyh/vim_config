@@ -13,34 +13,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 let g:neobundle#install_process_timeout=18000
 
 NeoBundle 'editorconfig/editorconfig-vim.git'
-NeoBundleLazy 'fatih/vim-go', {
-         \ 'autoload': {
-         \     'filetypes': 'go'
-         \ }}
-NeoBundle 'wincent/command-t', { 'build' : {
-         \ 'linux' : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"',
-         \ 'mac'   : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"'}}
-NeoBundle 'Glench/Vim-Jinja2-Syntax.git'
 NeoBundle 'godlygeek/tabular'
-NeoBundleLazy 'flowtype/vim-flow', {
-         \ 'autoload': {
-         \     'filetypes': 'javascript'
-         \ },
-         \ 'build': {
-         \     'mac': 'npm install -g flow-bin',
-         \     'unix': 'npm install -g flow-bin'
-         \ }}
 NeoBundleLazy 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'mxw/vim-jsx'
 NeoBundle 'nelstrom/vim-markdown-folding'
 NeoBundle 'nelstrom/vim-visual-star-search'
 NeoBundle 'ntpeters/vim-better-whitespace'
-NeoBundleLazy 'pangloss/vim-javascript', {
-         \ 'autoload': {
-         \     'filetypes': 'javascript'
-         \ }}
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'Shougo/vimproc.vim', {
          \ 'build' : {
          \     'windows' : 'make -f make_mingw32.mak',
@@ -51,12 +31,6 @@ NeoBundle 'Shougo/vimproc.vim', {
          \ }
 NeoBundle 'SirVer/ultisnips'
 NeoBundleLazy 'sjl/gundo.vim'
-NeoBundle 'ternjs/tern_for_vim.git', {
-         \ 'build' : {
-         \     'mac' : 'npm install',
-         \     'unix' : 'npm install',
-         \    },
-         \ }
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'thinca/vim-fontzoom'
 NeoBundle 'thinca/vim-localrc'
@@ -66,7 +40,10 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'Valloric/ListToggle'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {
-         \ 'linux' : 'git checkout master && ./install.sh --clang-completer --system-libclang --system-boost'}}
+         \ 'linux' : 'git checkout master && ./install.sh --clang-completer --system-libclang --system-boost --tern-completer'}}
+NeoBundle 'wincent/command-t', { 'build' : {
+         \ 'linux' : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"',
+         \ 'mac'   : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"'}}
 
 call neobundle#end()
 filetype plugin indent on
@@ -164,7 +141,7 @@ set textwidth=100
 set laststatus=2
 " Add git branch to statusline.
 " cf the default statusline: %<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P.
-set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
+"set statusline=%<%f\ %{fugitive#statusline()}%h%m%r%=%-14.(%l,%c%V%)\ %P
 " Highlight whitespace.
 set list
 set listchars=tab:>·
