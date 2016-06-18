@@ -12,25 +12,34 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Make sure YouCompleteMe checkout doesn't time out.
 let g:neobundle#install_process_timeout=18000
 
-NeoBundle 'dag/vim2hs'
-NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'eagletmt/ghcmod-vim'
-NeoBundle 'eagletmt/neco-ghc'
 NeoBundle 'editorconfig/editorconfig-vim.git'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'git://git.wincent.com/command-t.git', { 'build' : {
-         \ 'linux' : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"',
-         \ 'mac'   : 'sh -c "cd ruby/command-t && ruby extconf.rb && make"'}}
+NeoBundleLazy 'fatih/vim-go', {
+         \ 'autoload': {
+         \     'filetypes': 'go'
+         \ }}
+NeoBundle 'wincent/command-t', { 'build' : {
+         \ 'linux' : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"',
+         \ 'mac'   : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"'}}
 NeoBundle 'Glench/Vim-Jinja2-Syntax.git'
 NeoBundle 'godlygeek/tabular'
-NeoBundle 'majutsushi/tagbar'
+NeoBundleLazy 'flowtype/vim-flow', {
+         \ 'autoload': {
+         \     'filetypes': 'javascript'
+         \ },
+         \ 'build': {
+         \     'mac': 'npm install -g flow-bin',
+         \     'unix': 'npm install -g flow-bin'
+         \ }}
+NeoBundleLazy 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'mxw/vim-jsx'
-NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'nelstrom/vim-markdown-folding'
 NeoBundle 'nelstrom/vim-visual-star-search'
 NeoBundle 'ntpeters/vim-better-whitespace'
-NeoBundle 'pangloss/vim-javascript'
+NeoBundleLazy 'pangloss/vim-javascript', {
+         \ 'autoload': {
+         \     'filetypes': 'javascript'
+         \ }}
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimproc.vim', {
          \ 'build' : {
@@ -41,7 +50,7 @@ NeoBundle 'Shougo/vimproc.vim', {
          \    },
          \ }
 NeoBundle 'SirVer/ultisnips'
-NeoBundle 'sjl/gundo.vim'
+NeoBundleLazy 'sjl/gundo.vim'
 NeoBundle 'ternjs/tern_for_vim.git', {
          \ 'build' : {
          \     'mac' : 'npm install',
@@ -93,6 +102,9 @@ set wildignore+=*.class,*.apk,*.apk.d
 set wildignore+=*.pyc
 " node_modules.
 set wildignore+=node_modules
+" Ignore build dirs when Command-T-ing
+set wildignore+=build_client
+set wildignore+=build_server
 " Use numbering. Don't use relative numbering as this is slow (especially in
 " .tex files).
 set number
@@ -177,6 +189,9 @@ let g:EclimJavaHierarchyDefaultAction='vsplit'
 let g:EclimJavaCallHierarchyDefaultAction='vsplit'
 " If JavaSearch returns a single result, open it in the current window.
 let g:EclimJavaSearchSingleResult='edit'
+""" Flow. {{{2
+" Disable Flow checking on save.
+let g:flow#enable=0
 """ Gundo. {{{2
 " Open Gundo plugin.
 nmap <leader>u :GundoToggle<CR>
@@ -192,7 +207,7 @@ nmap <buffer> <leader>S :SyntasticToggleMode<CR>
 " Force a syntax check (useful for passive_filetypes).
 nmap <buffer> <leader>c :SyntasticCheck<CR>:Errors<CR>
 " Use JSXHint checker.
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 """ Tabular. {{{2
 map <leader>T :Tabularize
 """ Tagbar. {{{2
@@ -205,8 +220,6 @@ let g:tagbar_autofocus=1            " Cursor moves to Tagbar window when it open
 let g:UltiSnipsExpandTrigger="<c-f>"
 let g:UltiSnipsJumpForwardTrigger="<c-g>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-" Snippet read directory is "my_UltiSnips".
-let g:UltiSnipsSnippetDirectories=["my_UltiSnips"]
 " :UltiSnipsEdit will open the snippet file in a horizontal split.
 let g:UltiSnipsEditSplit="horizontal"
 """ vim-jsx. {{{2
