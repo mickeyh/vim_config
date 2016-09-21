@@ -13,6 +13,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 let g:neobundle#install_process_timeout=18000
 
 NeoBundle 'editorconfig/editorconfig-vim.git'
+NeoBundle 'lambdatoast/elm.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundleLazy 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
@@ -71,7 +72,7 @@ set completeopt=longest,menuone
 " Make filename completion act like bash.
 set wildmode=list:longest
 " Ignore certain glob patterns.
-set wildignore=.git,.hg,node_modules,*.png,*.jpg,*.o
+set wildignore=.git,.hg,elm-stuff,node_modules,*.png,*.jpg,*.o
 " Common files in Android projects.
 set wildignore+=*.class,*.apk,*.apk.d
 " Common files in Python projects.
