@@ -15,6 +15,7 @@ let g:neobundle#install_process_timeout=18000
 NeoBundle 'editorconfig/editorconfig-vim.git'
 NeoBundle 'lambdatoast/elm.vim'
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundleLazy 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'nelstrom/vim-markdown-folding'
