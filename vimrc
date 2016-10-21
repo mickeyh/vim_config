@@ -171,6 +171,8 @@ let g:EclimJavaSearchSingleResult='edit'
 """ Elm-Vim. {{{2
 " Run elm-format on autosave.
 let g:elm_format_autosave=1
+" Stop elm-vim from setting up keybindings that clobber mine.
+let g:elm_setup_keybindings=0
 """ Flow. {{{2
 " Disable Flow checking on save.
 let g:flow#enable=0
