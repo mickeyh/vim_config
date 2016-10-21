@@ -13,7 +13,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 let g:neobundle#install_process_timeout=18000
 
 NeoBundle 'editorconfig/editorconfig-vim.git'
-NeoBundle 'lambdatoast/elm.vim'
+NeoBundle 'elmcast/elm-vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundleLazy 'majutsushi/tagbar'
@@ -168,6 +168,9 @@ let g:EclimJavaHierarchyDefaultAction='vsplit'
 let g:EclimJavaCallHierarchyDefaultAction='vsplit'
 " If JavaSearch returns a single result, open it in the current window.
 let g:EclimJavaSearchSingleResult='edit'
+""" Elm-Vim. {{{2
+" Run elm-format on autosave.
+let g:elm_format_autosave=1
 """ Flow. {{{2
 " Disable Flow checking on save.
 let g:flow#enable=0
@@ -212,7 +215,7 @@ let g:ycm_filetype_whitelist={'c':1,'cpp':1,'go':1,'haskell':1,'java':1,'javascr
 let g:ycm_filetype_blacklist={'help':1}
 " Specify a default YCM configuration file if none is found for the current project.
 let g:ycm_global_ycm_extra_conf='~/.vim/ycm_confs/default_ycm_extra_conf.py'
-" Enable autocompletions with haskell.
+" Enable autocompletions with go, haskell.
 let g:ycm_semantic_triggers={'go':['.'],'haskell':['.']}
 
 " vim: set ft=vim foldmethod=marker ts=3 sw=3 tw=80 et :
