@@ -171,6 +171,8 @@ let g:EclimJavaSearchSingleResult='edit'
 """ Elm-Vim. {{{2
 " Run elm-format on autosave.
 let g:elm_format_autosave=1
+" Compile to /tmp instead of polluting the current directory.
+let g:elm_make_output_file = "/tmp/.elm.js"
 " Stop elm-vim from setting up keybindings that clobber mine.
 let g:elm_setup_keybindings=0
 """ Flow. {{{2
