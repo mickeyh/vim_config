@@ -14,6 +14,14 @@ let g:neobundle#install_process_timeout=18000
 
 NeoBundle 'editorconfig/editorconfig-vim.git'
 NeoBundle 'elmcast/elm-vim'
+NeoBundleLazy 'flowtype/vim-flow', {
+         \ 'autoload': {
+         \     'filetypes': 'javascript'
+         \ },
+         \ 'build': {
+         \     'mac': 'npm install -g flow-bin',
+         \     'unix': 'npm install -g flow-bin'
+         \ }}
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundleLazy 'majutsushi/tagbar'
@@ -42,7 +50,8 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'Valloric/ListToggle'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {
-         \ 'linux' : 'git checkout master && ./install.sh --clang-completer --system-libclang --system-boost --tern-completer'}}
+         \ 'linux' : 'git checkout master && ./install.sh --clang-completer --system-libclang --system-boost',
+         \ 'mac' : 'git checkout master && ./install.sh --clang-completer'}}
 NeoBundle 'wincent/command-t', { 'build' : {
          \ 'linux' : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"',
          \ 'mac'   : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"'}}
@@ -208,9 +217,12 @@ let g:UltiSnipsJumpForwardTrigger="<c-g>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 " :UltiSnipsEdit will open the snippet file in a horizontal split.
 let g:UltiSnipsEditSplit="horizontal"
+""" vim-flow. {{{2
+" Do not automatically typecheck on file save. I bind this to <leader>m instead.
+let g:flow#enable=0
 """ vim-jsx. {{{2
 " Turn on vim-jsx in .js files.
-let g:jsx_ext_required = 0
+let g:jsx_ext_required=0
 """ YouCompleteMe. {{{2
 " Make sure YCM uses system Python (not Anaconda Python).
 let g:ycm_path_to_python_interpreter='/usr/local/bin/python2'
