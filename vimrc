@@ -38,7 +38,6 @@ NeoBundleLazy 'ruanyl/vim-fixmyjs', {
          \ 'build': {
          \     'mac': 'npm install -g babel-eslint eslint eslint-config-standard eslint-config-standard-react eslint-plugin-flow-vars eslint-plugin-promise eslint-plugin-react eslint-plugin-standard',
          \ }}
-
 NeoBundle 'Shougo/vimproc.vim', {
          \ 'build' : {
          \     'windows' : 'make -f make_mingw32.mak',
@@ -55,6 +54,7 @@ NeoBundle 'thinca/vim-localrc'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-repeat'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-syntastic/syntastic'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'Valloric/ListToggle'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {
@@ -205,8 +205,15 @@ let g:jedi#goto_command='<C-]>'
 """ Multiple Cursors plugin. {{{2
 let g:multi_cursor_use_default_mapping=1
 """ Syntastic plugin. {{{2
-" Toggle syntastic autochecking on write.
-nmap <buffer> <leader>S :SyntasticToggleMode<CR>
+" Don't check on save.
+let g:syntastic_mode_map = {
+  \ "mode": "passive",
+  \ "active_filetypes": [],
+  \ "passive_filetypes": [] }
+" Populate location list when run.
+let g:syntastic_always_populate_loc_list = 1
+" Automatically open/close the location list if there are/aren't errors.
+let g:syntastic_auto_loc_list = 1
 " Force a syntax check (useful for passive_filetypes).
 nmap <buffer> <leader>c :SyntasticCheck<CR>:Errors<CR>
 " Use JSXHint checker.
