@@ -31,6 +31,14 @@ NeoBundle 'nelstrom/vim-markdown-folding'
 NeoBundle 'nelstrom/vim-visual-star-search'
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundleLazy 'ruanyl/vim-fixmyjs', {
+         \ 'autoload': {
+         \     'filetypes': 'javascript'
+         \ },
+         \ 'build': {
+         \     'mac': 'npm install -g babel-eslint eslint eslint-config-standard eslint-config-standard-react eslint-plugin-flow-vars eslint-plugin-promise eslint-plugin-react eslint-plugin-standard',
+         \ }}
+
 NeoBundle 'Shougo/vimproc.vim', {
          \ 'build' : {
          \     'windows' : 'make -f make_mingw32.mak',

@@ -1,6 +1,7 @@
 nnoremap <buffer> <silent> <c-]> :FlowJumpToDef<CR>
 
 nmap <Leader>T :FlowType<CR>
+nmap <Leader>f :Fixmyjs<CR>
 nmap <Leader>m :FlowMake<CR>
 
 " Set tabs to 2.
