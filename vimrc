@@ -23,6 +23,7 @@ NeoBundleLazy 'flowtype/vim-flow', {
          \     'unix': 'npm install -g flow-bin'
          \ }}
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'fatih/vim-go'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundleLazy 'majutsushi/tagbar'
 NeoBundle 'mileszs/ack.vim'
@@ -209,7 +210,7 @@ let g:multi_cursor_use_default_mapping=1
 let g:syntastic_mode_map = {
   \ "mode": "passive",
   \ "active_filetypes": [],
-  \ "passive_filetypes": [] }
+  \ "passive_filetypes": ["go"] }
 " Populate location list when run.
 let g:syntastic_always_populate_loc_list = 1
 " Automatically open/close the location list if there are/aren't errors.

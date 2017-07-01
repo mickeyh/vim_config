@@ -24,6 +24,9 @@ nmap <Leader>T <Plug>(go-info)
 
 nmap <Leader>e <Plug>(go-rename)
 
+" Use goimports to format on save.
+let g:go_fmt_command='goimports'
+
 " Turn on all the syntax hilighting!
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
