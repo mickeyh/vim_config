@@ -92,16 +92,11 @@ set completeopt=longest,menuone
 " Make filename completion act like bash.
 set wildmode=list:longest
 " Ignore certain glob patterns.
-set wildignore=.git,.hg,elm-stuff,node_modules,*.png,*.jpg,*.o
+set wildignore=.git,.hg,*.png,*.jpg,*.o
 " Common files in Android projects.
 set wildignore+=*.class,*.apk,*.apk.d
 " Common files in Python projects.
 set wildignore+=*.pyc
-" node_modules.
-set wildignore+=node_modules
-" Ignore build dirs when Command-T-ing
-set wildignore+=build_client
-set wildignore+=build_server
 " Use numbering. Don't use relative numbering as this is slow (especially in
 " .tex files).
 set number
