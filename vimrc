@@ -239,6 +239,9 @@ let g:flow#enable=0
 """ vim-jsx. {{{2
 " Turn on vim-jsx in .js files.
 let g:jsx_ext_required=0
+""" vim-surround. {{{2
+" Disable the insert mode (<c-g>s, <c-g>S) mappings.
+let g:surround_no_insert_mappings=1
 """ YouCompleteMe. {{{2
 " Make sure YCM uses system Python (not Anaconda Python).
 "let g:ycm_path_to_python_interpreter='/usr/bin/python2'
