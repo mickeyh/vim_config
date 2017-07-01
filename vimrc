@@ -229,10 +229,10 @@ let g:tagbar_autofocus=1            " Cursor moves to Tagbar window when it open
 """ UltiSnips. {{{2
 " Expand <c-f>, list snippets <c-tab>, forward <c-g>, backward <c-b>.
 let g:UltiSnipsExpandTrigger="<c-f>"
-let g:UltiSnipsJumpForwardTrigger="<c-g>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger='<c-g>'
+let g:UltiSnipsJumpBackwardTrigger='<c-b>'
 " :UltiSnipsEdit will open the snippet file in a horizontal split.
-let g:UltiSnipsEditSplit="horizontal"
+let g:UltiSnipsEditSplit='horizontal'
 """ vim-flow. {{{2
 " Do not automatically typecheck on file save. I bind this to <leader>m instead.
 let g:flow#enable=0
