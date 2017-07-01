@@ -240,7 +240,7 @@ let g:flow#enable=0
 let g:jsx_ext_required=0
 """ YouCompleteMe. {{{2
 " Make sure YCM uses system Python (not Anaconda Python).
-let g:ycm_path_to_python_interpreter='/usr/local/bin/python2'
+let g:ycm_path_to_python_interpreter='/usr/bin/python2'
 " Only enable ycm in these filetypes.
 let g:ycm_filetype_whitelist={'c':1,'cpp':1,'go':1,'haskell':1,'java':1,'javascript':1,'matlab':1,'python':1,'r':1}
 let g:ycm_filetype_blacklist={'help':1}
