@@ -34,6 +34,9 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+" Turn off file templates (they are usually wrong).
+let g:go_template_autocreate = 0
+
 " Add $GOPATH to vim path so :find and gf work.
 set path+=$GOPATH/src/**
 
