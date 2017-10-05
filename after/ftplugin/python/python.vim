@@ -9,6 +9,7 @@
 set nosmartindent
 
 """" 1. Key Bindings.
+noremap <leader>8 :Autoformat<CR>
 
 """" 2. Vim Appearance.
 " Wrap lines longer than 100 characters.
@@ -24,3 +25,7 @@ set foldnestmax=2
 set number
 
 """" 3. Plugin Configuration.
+""" vim-autoformat
+"" Use yapf to apply Google Python style.
+let g:formatters_python = ['yapf']
+let g:formatter_yapf_style = 'pep8'

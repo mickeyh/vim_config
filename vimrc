@@ -12,6 +12,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Make sure YouCompleteMe checkout doesn't time out.
 let g:neobundle#install_process_timeout=18000
 
+NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'editorconfig/editorconfig-vim.git'
 NeoBundle 'elmcast/elm-vim'
 NeoBundleLazy 'flowtype/vim-flow', {
