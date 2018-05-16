@@ -174,6 +174,9 @@ nmap <leader>a :Ack
 """ Command-T. {{{2
 " Use Vim's pwd as the search root.
 let g:CommandTTraverseSCM='pwd'
+" Hard set the VSplit command because for some reason it always does a regular
+" Split for me
+let g:CommandTAcceptSelectionVSplitMap=['<C-v>']
 """ Eclim. {{{2
 " Make Eclim play nicely with YouCompleteMe.
 let g:EclimCompletionMethod='omnifunc'
