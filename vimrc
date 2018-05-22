@@ -62,6 +62,7 @@ NeoBundle 'Valloric/ListToggle'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {
          \ 'linux' : 'git checkout master && ./install.sh --clang-completer --system-libclang --system-boost',
          \ 'mac' : 'git checkout master && ./install.sh --clang-completer'}}
+NeoBundle 'Vimjas/vim-python-pep8-indent'
 NeoBundle 'wincent/command-t', { 'build' : {
          \ 'linux' : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"',
          \ 'mac'   : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"'}}
