@@ -42,5 +42,7 @@ endsnippet
 
 snippet ube "Exec line" b
 #!/usr/bin/env bash
+set -eou pipefail
+IFS=$'\n\t'
 $0
 endsnippet

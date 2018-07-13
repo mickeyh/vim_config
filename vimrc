@@ -15,14 +15,6 @@ let g:neobundle#install_process_timeout=18000
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'editorconfig/editorconfig-vim.git'
 NeoBundle 'elmcast/elm-vim'
-NeoBundleLazy 'flowtype/vim-flow', {
-         \ 'autoload': {
-         \     'filetypes': 'javascript'
-         \ },
-         \ 'build': {
-         \     'mac': 'npm install -g flow-bin',
-         \     'unix': 'npm install -g flow-bin'
-         \ }}
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'kchmck/vim-coffee-script'
@@ -60,12 +52,12 @@ NeoBundle 'vim-syntastic/syntastic'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'Valloric/ListToggle'
 NeoBundle 'Valloric/YouCompleteMe', {'build' : {
-         \ 'linux' : 'git checkout master && ./install.sh --clang-completer --system-libclang --system-boost',
-         \ 'mac' : 'git checkout master && ./install.sh --clang-completer'}}
+         \ 'linux' : './install.py --go-completer --clang-completer',
+         \ 'mac' : './install.sh --clang-completer'}}
 NeoBundle 'Vimjas/vim-python-pep8-indent'
 NeoBundle 'wincent/command-t', { 'build' : {
-         \ 'linux' : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"',
-         \ 'mac'   : 'sh -c "cd ruby/command-t && make clean && ruby extconf.rb && make"'}}
+         \ 'linux' : 'sh -c "cd ruby/command-t/ext/command-t && ruby extconf.rb && make clean && make"',
+         \ 'mac'   : 'sh -c "cd ruby/command-t/ext/command-t && ruby extconf.rb && make clean && make"'}}
 
 call neobundle#end()
 filetype plugin indent on
