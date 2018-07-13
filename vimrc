@@ -68,10 +68,13 @@ NeoBundleCheck
 """" 1. Locale. {{{1
 
 """" 2. Vim Behaviour. {{{1
-" Allow switching away from unsaved buffers.
-set hidden
 " Reload files automatically if they have changed.
 set autoread
+" WTF you have to make vim's backspace behave sanely?
+" See http://vim.wikia.com/wiki/Backspace_and_delete_problems
+set backspace=2
+" Allow switching away from unsaved buffers.
+set hidden
 " Set swapfile directory to ~/.backup if possible.
 set directory=~/.backup,.
 " Use filetype-based syntax hilighting, ftplugins, and indentation.
