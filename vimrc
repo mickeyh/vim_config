@@ -73,6 +73,8 @@ set autoread
 " WTF you have to make vim's backspace behave sanely?
 " See http://vim.wikia.com/wiki/Backspace_and_delete_problems
 set backspace=2
+" UTF-8
+set encoding=utf-8
 " Allow switching away from unsaved buffers.
 set hidden
 " Set swapfile directory to ~/.backup if possible.
@@ -104,6 +106,9 @@ set modeline
 set modelines=5
 " No spell checking by default. Use English as language.
 set nospell spelllang=en_us
+" Disable bracketed paste since it breaks copy/paste in some terminals. See
+" https://github.com/vim/vim/issues/1671.
+set t_BE=
 
 """" 3. Remappings. {{{1
 let mapleader='\'
