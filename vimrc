@@ -23,7 +23,6 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'nelstrom/vim-markdown-folding'
 NeoBundle 'nelstrom/vim-visual-star-search'
-NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundleLazy 'ruanyl/vim-fixmyjs', {
          \ 'autoload': {
