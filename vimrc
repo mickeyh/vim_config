@@ -95,6 +95,8 @@ set wildignore=.git,.hg,*.png,*.jpg,*.o,*.swp
 set wildignore+=*.class,*.apk,*.apk.d
 " Common files in Python projects.
 set wildignore+=*.pyc
+" Bazel directories.
+set wildignore+=bazel-bin,bazel-out,bazel-testlogs
 " Use numbering. Don't use relative numbering as this is slow (especially in
 " .tex files).
 set number
